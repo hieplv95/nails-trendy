@@ -81,6 +81,7 @@ section{padding:120px 0}
 .it .d{flex:1;min-width:20px;border-bottom:1px dotted #C9BBA6;transform:translateY(-5px)}
 .it .p{font-family:'Playfair Display',serif;font-size:1.05rem;white-space:nowrap}
 .card .note{text-align:center;margin-top:40px;font-size:.78rem;color:var(--muted);letter-spacing:.06em;position:relative;z-index:1}
+.card .note a{color:var(--ink);border-bottom:1px solid var(--gold)}
 
 /* gallery */
 .filters{display:flex;justify-content:center;gap:30px;margin-bottom:46px;flex-wrap:wrap}
@@ -184,8 +185,8 @@ footer small{color:var(--muted);font-size:.72rem;letter-spacing:.1em}
 .fab{position:fixed;right:16px;bottom:16px;z-index:50;display:none;flex-direction:column;gap:10px}
 .fab a{width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.7rem;letter-spacing:.06em;font-weight:500;box-shadow:0 12px 24px -10px rgba(28,26,23,.5)}
 .fab .call{background:var(--ink);color:var(--bg)}
-.fab .call svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.6}
-.fab .zalo{background:var(--gold);color:#fff}
+.fab svg{width:21px;height:21px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linejoin:round}
+.fab .wa{background:var(--gold);color:#fff}
 
 /* reveal */
 .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}

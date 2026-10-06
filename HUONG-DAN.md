@@ -1,6 +1,6 @@
 # Website Nails Trendy — Hướng dẫn sửa nội dung
 
-Giao diện hiện tại: **Paris Chic** (trắng ngà, đen, vàng champagne).
+Giao diện hiện tại: **Paris Chic** (trắng ngà, đen, vàng champagne). Nội dung web viết bằng **tiếng Tây Ban Nha**, khách đặt lịch qua **WhatsApp**.
 
 ## Cấu trúc
 ```
@@ -15,13 +15,14 @@ nails-trendy/
 ```
 
 ## Sửa thông tin tiệm
-Mở `js/config.js`, sửa số điện thoại, địa chỉ, giờ mở cửa, link Facebook/Instagram/TikTok, dòng khuyến mãi (hiện ở thanh trên cùng).
-Mọi chỗ trên website (nút gọi, nút Zalo, chân trang, form) sẽ tự cập nhật.
+Mở `js/config.js`, sửa số điện thoại, số WhatsApp, địa chỉ, giờ mở cửa, ngày nghỉ, khung giờ đặt lịch, link Instagram/Facebook/TikTok, dòng chữ ở thanh trên cùng.
+Các dòng ghi "VÍ DỤ" trong file là thông tin tạm, cần thay bằng thông tin thật.
+Mọi chỗ trên website (nút gọi, nút WhatsApp, chân trang, form) sẽ tự cập nhật.
 
 ## Sửa bảng giá
-Trong `index.html`, tìm `BẢNG GIÁ`. Mỗi dòng có dạng:
+Trong `index.html`, tìm `LISTA DE PRECIOS`. Mỗi dòng có dạng:
 ```html
-<div class="it"><span class="n">Tên dịch vụ<small>Mô tả ngắn</small></span><span class="d"></span><span class="p">150.000đ</span></div>
+<div class="it"><span class="n">Tên dịch vụ<small>Mô tả ngắn</small></span><span class="d"></span><span class="p">25€</span></div>
 ```
 Phần `<small>…</small>` không bắt buộc.
 
@@ -32,8 +33,8 @@ Bỏ ảnh vào `images/` (nên dùng ảnh dọc, tỉ lệ 3:4), rồi trong `
 
 Ảnh sẽ tự phủ kín khung. Có thể xoá các `<div class="nail">` (hình vẽ minh hoạ) khi đã có ảnh.
 
-`data-cat` của mỗi mẫu quyết định nút lọc: `french`, `nude`, `wine` (rượu vang), `art` (nghệ thuật), `bride` (cô dâu). Một mẫu có thể thuộc nhiều loại, cách nhau bằng dấu cách.
+`data-cat` của mỗi mẫu quyết định nút lọc: `french`, `nude`, `wine` (burdeos), `art` (nail art), `bride` (novias). Một mẫu có thể thuộc nhiều loại, cách nhau bằng dấu cách.
 
 ## Form đặt lịch
-Hiện form kiểm tra thông tin, sao chép tóm tắt lịch hẹn rồi mời khách gửi qua Zalo của tiệm.
+Form kiểm tra thông tin, rồi mở WhatsApp với tin nhắn đặt lịch soạn sẵn gửi tới số của tiệm.
 Muốn lịch hẹn tự gửi về Google Sheet / email / Telegram: viết thêm vào hàm `sendBooking` trong `js/main.js`.
