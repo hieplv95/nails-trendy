@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mẫu 1 · Blush Elegance</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500&family=Great+Vibes&family=Be+Vietnam+Pro:wght@300;400;500;600&display=swap&subset=vietnamese" rel="stylesheet">
+<style>
+:root{--bg:#FFF9F7;--blush:#F7E1DD;--rose:#C97B84;--rose-d:#A85F69;--deep:#4E3236;--muted:#8A6E72;--gold:#C9A46A;--line:#EED7D2}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--deep);font-family:'Be Vietnam Pro',sans-serif;font-weight:300;line-height:1.7}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:'Playfair Display',serif;font-weight:500;line-height:1.2}
+.script{font-family:'Great Vibes',cursive;color:var(--rose);font-size:1.6em;font-weight:400}
+.btn{display:inline-block;padding:14px 32px;border-radius:40px;background:var(--rose);color:#fff;font-weight:500;letter-spacing:.04em;transition:.25s}
+.btn:hover{background:var(--rose-d);transform:translateY(-2px)}
+.btn.ghost{background:transparent;border:1px solid var(--rose);color:var(--rose)}
+.btn.ghost:hover{background:var(--rose);color:#fff}
+/* nav */
+nav{position:sticky;top:0;z-index:20;background:rgba(255,249,247,.9);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:76px}
+.logo{font-family:'Playfair Display',serif;font-size:1.5rem;font-style:italic}
+.logo span{color:var(--rose)}
+.menu{display:flex;gap:34px;font-size:.92rem;font-weight:400}
+.menu a:hover{color:var(--rose)}
+/* hero */
+.hero{padding:80px 0 100px;position:relative;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.05fr 1fr;gap:60px;align-items:center}
+.hero h1{font-size:clamp(2.6rem,5vw,4.2rem);margin:6px 0 22px}
+.hero h1 em{color:var(--rose)}
+.hero p{font-size:1.08rem;color:var(--muted);max-width:460px;margin-bottom:34px}
+.hero .actions{display:flex;gap:14px;flex-wrap:wrap}
+.hero-art{position:relative;aspect-ratio:4/5;border-radius:240px 240px 24px 24px;background:linear-gradient(160deg,#F9E4E0,#EFC9C6 60%,#E5B3B4);display:flex;align-items:flex-end;justify-content:center;gap:16px;padding-bottom:70px;box-shadow:0 30px 60px -30px rgba(169,95,105,.45)}
+.hero-art::before{content:"";position:absolute;inset:18px;border:1px solid rgba(255,255,255,.7);border-radius:224px 224px 14px 14px}
+.nail{width:46px;height:96px;border-radius:50% 50% 14px 14px/58% 58% 14px 14px;position:relative;box-shadow:inset -6px -8px 14px rgba(0,0,0,.08),0 10px 20px -8px rgba(0,0,0,.18)}
+.nail::after{content:"";position:absolute;top:12px;left:10px;width:9px;height:34px;border-radius:10px;background:rgba(255,255,255,.55)}
+.hero-art .nail:nth-child(1){height:82px;background:#E7A7AB}
+.hero-art .nail:nth-child(2){height:104px;background:#C97B84}
+.hero-art .nail:nth-child(3){height:116px;background:linear-gradient(180deg,#fff 0 30%,#F4D3CF 30%)}
+.hero-art .nail:nth-child(4){height:100px;background:#D9969A}
+.hero-art .nail:nth-child(5){height:76px;background:#F1C6C2}
+.badge{position:absolute;background:#fff;border-radius:18px;padding:14px 20px;box-shadow:0 14px 30px -14px rgba(78,50,54,.3);font-size:.85rem}
+.badge b{display:block;font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--rose)}
+.badge.b1{top:60px;left:-30px}.badge.b2{bottom:40px;right:-24px}
+/* sections */
+section{padding:100px 0}
+.head{text-align:center;max-width:620px;margin:0 auto 60px}
+.head h2{font-size:clamp(2rem,3.6vw,2.8rem);margin-top:-6px}
+.head p{color:var(--muted);margin-top:14px}
+.divider{width:60px;height:1px;background:var(--gold);margin:18px auto 0}
+/* services */
+.services{background:#fff}
+.svc-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:28px 70px}
+.svc-cat h3{font-size:1.5rem;margin-bottom:18px;display:flex;align-items:center;gap:12px}
+.svc-cat h3::before{content:"";width:10px;height:10px;border-radius:50%;background:var(--rose)}
+.price{display:flex;align-items:baseline;gap:12px;padding:12px 0;border-bottom:1px dashed var(--line)}
+.price .n{font-weight:400}
+.price small{display:block;color:var(--muted);font-size:.82rem}
+.price .dots{flex:1}
+.price .v{font-family:'Playfair Display',serif;color:var(--rose);font-size:1.1rem;white-space:nowrap}
+/* gallery */
+.gal{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:220px;gap:18px}
+.g{border-radius:20px;display:flex;align-items:center;justify-content:center;gap:10px;position:relative;overflow:hidden}
+.g:nth-child(1){grid-row:span 2;background:linear-gradient(160deg,#FBE9E6,#F2CBC8)}
+.g:nth-child(2){background:#F6EEE6}
+.g:nth-child(3){background:linear-gradient(160deg,#FDF3EC,#F5DCCB)}
+.g:nth-child(4){grid-row:span 2;background:#F3E3EA}
+.g:nth-child(5){grid-column:span 2;background:linear-gradient(120deg,#FFF4F1,#F7DAD6)}
+.g .nail{width:36px;height:74px}
+.g span{position:absolute;bottom:14px;left:18px;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+/* about */
+.about .wrap{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.about-img{aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 30% 30%,#fff,#F3D2CE 55%,#E3AEB0);position:relative;display:flex;align-items:center;justify-content:center}
+.about-img .script{font-size:4rem;color:#fff;text-shadow:0 4px 18px rgba(169,95,105,.4)}
+.about h2{font-size:2.5rem;margin-bottom:18px}
+.about p{color:var(--muted);margin-bottom:26px}
+.feats{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.feat{padding:20px;border:1px solid var(--line);border-radius:16px;background:#fff}
+.feat b{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:500;display:block;margin-bottom:4px}
+.feat small{color:var(--muted);font-size:.86rem}
+/* reviews */
+.reviews{background:var(--blush)}
+.rv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.rv{background:#fff;padding:34px 30px;border-radius:24px}
+.rv .stars{color:var(--gold);letter-spacing:4px;margin-bottom:14px}
+.rv p{font-family:'Playfair Display',serif;font-style:italic;font-size:1.05rem;margin-bottom:20px}
+.rv .who{font-size:.88rem;color:var(--muted)}
+/* booking */
+.book .box{background:#fff;border:1px solid var(--line);border-radius:32px;padding:60px;display:grid;grid-template-columns:1fr 1.2fr;gap:50px}
+.book h2{font-size:2.4rem;margin-bottom:14px}
+.book .info p{color:var(--muted);margin-bottom:24px}
+.book .info li{list-style:none;padding:10px 0;border-bottom:1px solid var(--line);font-size:.95rem}
+.book .info li b{font-weight:500;display:inline-block;width:110px}
+form{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+form .full{grid-column:1/-1}
+input,select,textarea{width:100%;padding:14px 18px;border:1px solid var(--line);border-radius:14px;background:var(--bg);font:inherit;color:var(--deep);outline:none}
+input:focus,select:focus,textarea:focus{border-color:var(--rose)}
+footer{padding:50px 0 90px;text-align:center;color:var(--muted);font-size:.88rem;border-top:1px solid var(--line)}
+footer .logo{font-size:1.8rem;color:var(--deep);margin-bottom:10px}
+.demo-tag{position:fixed;left:16px;bottom:16px;z-index:50;background:var(--deep);color:#fff;font-size:.78rem;padding:8px 14px;border-radius:30px;display:flex;gap:10px}
+.demo-tag a{opacity:.6}.demo-tag a.on,.demo-tag a:hover{opacity:1;text-decoration:underline}
+@media(max-width:860px){
+  .menu{display:none}
+  .hero .wrap,.about .wrap,.book .box,.svc-grid{grid-template-columns:1fr}
+  .hero-art{max-width:380px;margin:0 auto;width:100%}
+  .badge.b1{left:0}.badge.b2{right:0}
+  .gal{grid-template-columns:1fr 1fr;grid-auto-rows:160px}
+  .g:nth-child(5){grid-column:span 2}
+  .rv-grid{grid-template-columns:1fr}
+  .book .box{padding:32px 22px}
+  form{grid-template-columns:1fr}
+  section{padding:70px 0}
+}
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+  <a class="logo" href="#">Rosé <span>Nails</span></a>
+  <div class="menu"><a href="#dich-vu">Dịch vụ</a><a href="#bo-suu-tap">Bộ sưu tập</a><a href="#ve-chung-toi">Về chúng tôi</a><a href="#dat-lich">Liên hệ</a></div>
+  <a class="btn" href="#dat-lich" style="padding:10px 24px">Đặt lịch</a>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <div>
+    <div class="script">Beauty at your fingertips</div>
+    <h1>Đôi tay đẹp,<br><em>tự tin</em> mỗi ngày</h1>
+    <p>Không gian thư giãn nhẹ nhàng, dụng cụ tiệt trùng chuẩn y tế và đội ngũ thợ tay nghề cao — nơi bạn được chăm sóc như một nàng thơ.</p>
+    <div class="actions"><a class="btn" href="#dat-lich">Đặt lịch ngay</a><a class="btn ghost" href="#dich-vu">Xem bảng giá</a></div>
+  </div>
+  <div class="hero-art">
+    <div class="nail"></div><div class="nail"></div><div class="nail"></div><div class="nail"></div><div class="nail"></div>
+    <div class="badge b1"><b>8+</b>năm kinh nghiệm</div>
+    <div class="badge b2"><b>4.9★</b>2.000+ đánh giá</div>
+  </div>
+</div></header>
+
+<section class="services" id="dich-vu"><div class="wrap">
+  <div class="head"><div class="script">Our menu</div><h2>Dịch vụ &amp; Bảng giá</h2><div class="divider"></div></div>
+  <div class="svc-grid">
+    <div class="svc-cat"><h3>Tay</h3>
+      <div class="price"><div class="n">Sơn gel trơn<small>Bền màu 3–4 tuần</small></div><div class="dots"></div><div class="v">150.000đ</div></div>
+      <div class="price"><div class="n">Úp móng + sơn gel<small>Form tự nhiên hoặc nhọn</small></div><div class="dots"></div><div class="v">250.000đ</div></div>
+      <div class="price"><div class="n">Đắp bột / Gel<small>Dài, chắc, không nặng tay</small></div><div class="dots"></div><div class="v">350.000đ</div></div>
+      <div class="price"><div class="n">Vẽ nghệ thuật<small>Tính theo móng</small></div><div class="dots"></div><div class="v">từ 20.000đ</div></div>
+    </div>
+    <div class="svc-cat"><h3>Chân &amp; Spa</h3>
+      <div class="price"><div class="n">Sơn gel chân<small>Kèm cắt da, dũa form</small></div><div class="dots"></div><div class="v">150.000đ</div></div>
+      <div class="price"><div class="n">Spa chân thảo dược<small>Ngâm, tẩy da chết, massage 30'</small></div><div class="dots"></div><div class="v">200.000đ</div></div>
+      <div class="price"><div class="n">Dưỡng tay paraffin<small>Mềm mịn, cấp ẩm sâu</small></div><div class="dots"></div><div class="v">120.000đ</div></div>
+      <div class="price"><div class="n">Combo Tay + Chân<small>Sơn gel + spa thư giãn</small></div><div class="dots"></div><div class="v">399.000đ</div></div>
+    </div>
+  </div>
+</div></section>
+
+<section id="bo-suu-tap"><div class="wrap">
+  <div class="head"><div class="script">Gallery</div><h2>Mẫu móng được yêu thích</h2><p>Ảnh thật của khách sẽ được đặt vào đây.</p><div class="divider"></div></div>
+  <div class="gal">
+    <div class="g"><div class="nail" style="background:#E7A7AB"></div><div class="nail" style="background:#E7A7AB;height:88px"></div><span>Rose Pink</span></div>
+    <div class="g"><div class="nail" style="background:linear-gradient(180deg,#fff 0 28%,#F3E4D7 28%)"></div><span>French</span></div>
+    <div class="g"><div class="nail" style="background:#D4A373"></div><div class="nail" style="background:#E9C9A8"></div><span>Nude</span></div>
+    <div class="g"><div class="nail" style="background:linear-gradient(180deg,#F7D6E0,#C9A0DC)"></div><div class="nail" style="background:linear-gradient(180deg,#F7D6E0,#C9A0DC);height:90px"></div><span>Ombre</span></div>
+    <div class="g"><div class="nail" style="background:#A85F69"></div><div class="nail" style="background:#C9A46A"></div><div class="nail" style="background:#A85F69"></div><span>Wine &amp; Gold</span></div>
+  </div>
+</div></section>
+
+<section class="about" id="ve-chung-toi" style="background:#fff"><div class="wrap">
+  <div class="about-img"><div class="script">Rosé</div></div>
+  <div>
+    <div class="script">About us</div>
+    <h2>Chăm chút từng chi tiết nhỏ</h2>
+    <p>Rosé Nails ra đời từ niềm yêu thích cái đẹp tinh tế. Chúng tôi chỉ sử dụng sản phẩm chính hãng, an toàn cho móng và luôn lắng nghe để tạo ra bộ móng đúng ý bạn nhất.</p>
+    <div class="feats">
+      <div class="feat"><b>Tiệt trùng 100%</b><small>Dụng cụ hấp sấy riêng cho từng khách</small></div>
+      <div class="feat"><b>Sơn chính hãng</b><small>OPI, Gelish, DND nhập khẩu</small></div>
+      <div class="feat"><b>Thợ tay nghề cao</b><small>Đào tạo bài bản, cập nhật xu hướng</small></div>
+      <div class="feat"><b>Bảo hành 7 ngày</b><small>Sửa miễn phí nếu bong tróc</small></div>
+    </div>
+  </div>
+</div></section>
+
+<section class="reviews"><div class="wrap">
+  <div class="head"><div class="script">Love notes</div><h2>Khách hàng nói gì</h2></div>
+  <div class="rv-grid">
+    <div class="rv"><div class="stars">★★★★★</div><p>"Không gian xinh, chị thợ làm rất kỹ. Móng giữ được gần một tháng vẫn bóng đẹp."</p><div class="who">— Ngọc Anh</div></div>
+    <div class="rv"><div class="stars">★★★★★</div><p>"Lần nào đến cũng được tư vấn mẫu hợp tay. Spa chân thư giãn cực kỳ."</p><div class="who">— Thu Hà</div></div>
+    <div class="rv"><div class="stars">★★★★★</div><p>"Sạch sẽ, giá hợp lý, đặt lịch qua web tiện lắm, không phải chờ."</p><div class="who">— Minh Châu</div></div>
+  </div>
+</div></section>
+
+<section class="book" id="dat-lich"><div class="wrap"><div class="box">
+  <div class="info">
+    <div class="script">Book now</div>
+    <h2>Đặt lịch hẹn</h2>
+    <p>Để lại thông tin, chúng tôi sẽ gọi xác nhận trong 15 phút.</p>
+    <ul>
+      <li><b>Địa chỉ</b>123 Đường Hoa Hồng, Quận 1, TP.HCM</li>
+      <li><b>Hotline</b>0900 000 000</li>
+      <li><b>Giờ mở cửa</b>9:00 – 21:00 (T2 – CN)</li>
+    </ul>
+  </div>
+  <form onsubmit="event.preventDefault();alert('Đây là bản demo')">
+    <input placeholder="Họ và tên"><input placeholder="Số điện thoại">
+    <select class="full"><option>Chọn dịch vụ</option><option>Sơn gel</option><option>Úp móng</option><option>Spa chân</option><option>Combo Tay + Chân</option></select>
+    <input type="date"><input type="time">
+    <textarea class="full" rows="3" placeholder="Ghi chú (mẫu móng mong muốn...)"></textarea>
+    <button class="btn full" style="border:0;cursor:pointer;font:inherit;font-weight:500">Xác nhận đặt lịch</button>
+  </form>
+</div></div></section>
+
+<footer><div class="wrap"><div class="logo">Rosé <span style="color:var(--rose)">Nails</span></div>© 2026 Rosé Nails · Facebook · Instagram · TikTok · Zalo</div></footer>
+<div class="demo-tag">Mẫu: <a class="on" href="demo-1-blush.html">1</a><a href="demo-2-minimal.html">2</a><a href="demo-3-pastel.html">3</a><a href="demo-4-fresh.html">4</a></div>
+</body>
+</html>

@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mẫu 2 · Nordic Studio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600&display=swap&subset=vietnamese" rel="stylesheet">
+<style>
+:root{--bg:#F7F5F1;--white:#FFFFFF;--oak:#D8C6AC;--stone:#E9E5DE;--sage:#9DAA97;--sage-d:#7C8A76;--ink:#2B2B28;--muted:#77746D;--line:#E3DED5}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:'Manrope',sans-serif;font-weight:400;line-height:1.7;font-size:15.5px}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1240px;margin:0 auto;padding:0 32px}
+h1,h2,h3{font-weight:300;letter-spacing:-.03em;line-height:1.08}
+.lbl{font-size:.78rem;font-weight:500;color:var(--muted);display:inline-flex;align-items:center;gap:10px}
+.lbl::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--sage)}
+.btn{display:inline-flex;align-items:center;gap:12px;padding:15px 28px;border-radius:999px;background:var(--ink);color:#fff;font-weight:500;font-size:.92rem;border:0;cursor:pointer;font-family:inherit;transition:.25s}
+.btn:hover{background:var(--sage-d)}
+.btn .ar{width:22px;height:22px;border-radius:50%;background:rgba(255,255,255,.15);display:inline-flex;align-items:center;justify-content:center;font-size:.8rem}
+.btn.light{background:var(--white);color:var(--ink);border:1px solid var(--line)}
+.btn.light:hover{border-color:var(--ink);background:var(--white)}
+/* nav */
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:88px}
+.logo{font-weight:600;font-size:1.15rem;letter-spacing:-.01em;display:flex;align-items:center;gap:10px}
+.logo i{width:12px;height:20px;border-radius:50% 50% 4px 4px/60% 60% 4px 4px;background:var(--oak)}
+.logo span{font-weight:300;color:var(--muted)}
+.menu{display:flex;gap:36px;font-size:.92rem;color:var(--muted)}
+.menu a:hover{color:var(--ink)}
+/* hero */
+.hero{padding:30px 0 0}
+.hero-grid{display:grid;grid-template-columns:1.15fr 1fr;gap:28px}
+.hero h1{font-size:clamp(3rem,7vw,6.2rem);margin:22px 0 28px}
+.hero h1 b{font-weight:500}
+.hero p{color:var(--muted);font-size:1.08rem;max-width:460px;margin-bottom:34px}
+.hero .acts{display:flex;gap:12px;flex-wrap:wrap}
+.tiles{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:16px;min-height:520px}
+.tile{border-radius:24px;display:flex;align-items:center;justify-content:center;gap:10px;position:relative;overflow:hidden}
+.tile.big{grid-row:span 2;background:linear-gradient(180deg,#E6DACA,#D3C0A5)}
+.tile.t2{background:var(--stone)}
+.tile.t3{background:#DCE1D7}
+.tile small{position:absolute;left:18px;bottom:14px;font-size:.75rem;color:var(--muted);font-weight:500}
+.nail{width:42px;height:92px;border-radius:50% 50% 12px 12px/60% 60% 12px 12px;position:relative;box-shadow:inset -5px -8px 12px rgba(0,0,0,.06),0 12px 20px -12px rgba(0,0,0,.3)}
+.nail::after{content:"";position:absolute;top:11px;left:9px;width:7px;height:28px;border-radius:8px;background:rgba(255,255,255,.5)}
+.infobar{margin-top:28px;display:grid;grid-template-columns:repeat(4,1fr);background:var(--white);border-radius:24px;border:1px solid var(--line)}
+.infobar div{padding:24px 28px;border-right:1px solid var(--line)}
+.infobar div:last-child{border:0}
+.infobar small{display:block;font-size:.75rem;color:var(--muted);margin-bottom:2px}
+.infobar b{font-weight:500}
+/* sections */
+section{padding:130px 0}
+.sh{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end;margin-bottom:56px}
+.sh h2{font-size:clamp(2.4rem,4.6vw,3.8rem);margin-top:16px}
+.sh p{color:var(--muted);max-width:440px;justify-self:end}
+/* services */
+.svc{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.s{background:var(--white);border-radius:24px;padding:30px;border:1px solid var(--line);display:flex;flex-direction:column;min-height:260px;transition:.3s}
+.s:hover{transform:translateY(-4px);box-shadow:0 30px 50px -36px rgba(43,43,40,.4)}
+.s .no{font-size:.8rem;color:var(--muted);margin-bottom:auto}
+.s h3{font-size:1.6rem;font-weight:400;margin:40px 0 8px}
+.s p{color:var(--muted);font-size:.92rem;margin-bottom:22px}
+.s .pr{display:flex;justify-content:space-between;align-items:center;padding-top:18px;border-top:1px solid var(--line);font-weight:500}
+.s .pr span{font-size:.8rem;color:var(--muted);font-weight:400}
+.s.feat{background:var(--sage);border-color:var(--sage);color:#fff}
+.s.feat p,.s.feat .no,.s.feat .pr span{color:rgba(255,255,255,.85)}
+.s.feat .pr{border-color:rgba(255,255,255,.3)}
+/* gallery */
+.gal{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:18px;scrollbar-width:thin}
+.g{flex:0 0 280px;aspect-ratio:4/5;border-radius:24px;scroll-snap-align:start;display:flex;align-items:center;justify-content:center;gap:8px;position:relative}
+.g .nail{width:34px;height:74px}
+.g small{position:absolute;left:18px;bottom:16px;font-size:.8rem;font-weight:500}
+.g small span{display:block;color:var(--muted);font-weight:400;font-size:.74rem}
+/* values */
+.values{background:var(--white)}
+.vals{display:grid;grid-template-columns:repeat(3,1fr);gap:60px}
+.v svg{width:40px;height:40px;stroke:var(--ink);stroke-width:1.2;fill:none;margin-bottom:22px}
+.v h3{font-size:1.4rem;font-weight:400;margin-bottom:10px}
+.v p{color:var(--muted);font-size:.94rem}
+/* reviews */
+.rvs{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.rv{background:var(--white);border:1px solid var(--line);border-radius:24px;padding:36px}
+.rv p{font-size:1.25rem;font-weight:300;line-height:1.5;margin-bottom:26px;letter-spacing:-.01em}
+.rv .who{display:flex;align-items:center;gap:12px;font-size:.9rem}
+.rv .who i{width:40px;height:40px;border-radius:50%;background:var(--oak)}
+.rv .who small{display:block;color:var(--muted);font-size:.78rem}
+/* booking */
+.book{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.book .l{background:var(--stone);border-radius:28px;padding:50px;display:flex;flex-direction:column;justify-content:space-between;gap:40px}
+.book .l h2{font-size:clamp(2.4rem,4.6vw,3.6rem)}
+.book .l ul{list-style:none;display:grid;gap:14px}
+.book .l li{display:flex;justify-content:space-between;border-bottom:1px solid #D7D1C6;padding-bottom:12px;gap:16px}
+.book .l li span{color:var(--muted)}
+form{background:var(--white);border-radius:28px;padding:50px;border:1px solid var(--line);display:grid;gap:22px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+label{display:block;font-size:.8rem;font-weight:500;color:var(--muted);margin-bottom:4px}
+input,select{width:100%;min-width:0;border:0;border-bottom:1px solid var(--line);padding:10px 0;font:inherit;font-size:1rem;background:transparent;color:var(--ink);outline:none}
+input:focus,select:focus{border-color:var(--sage-d)}
+.chips{display:flex;gap:8px;flex-wrap:wrap}
+.chips span{padding:8px 16px;border-radius:999px;border:1px solid var(--line);font-size:.86rem;cursor:pointer}
+.chips span.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+footer{padding:50px 0 90px;border-top:1px solid var(--line);margin-top:40px}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:.88rem;color:var(--muted)}
+.demo-tag{position:fixed;left:16px;bottom:16px;z-index:50;background:var(--ink);color:#fff;font-size:.74rem;padding:8px 14px;border-radius:30px;display:flex;gap:10px}
+.demo-tag a{opacity:.6}.demo-tag a.on,.demo-tag a:hover{opacity:1;text-decoration:underline}
+@media(max-width:900px){
+  .wrap{padding:0 18px}
+  .menu{display:none}
+  .hero-grid,.sh,.book,.rvs{grid-template-columns:minmax(0,1fr)}
+  .sh p{justify-self:start}
+  .tiles{min-height:380px}
+  .infobar{grid-template-columns:1fr 1fr}
+  .infobar div:nth-child(2){border-right:0}
+  .infobar div:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  .svc,.vals{grid-template-columns:1fr;gap:16px}
+  .vals{gap:40px}
+  .book .l,form{padding:30px 22px}
+  .two{grid-template-columns:1fr}
+  section{padding:80px 0}
+  .g{flex-basis:220px}
+}
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+  <a class="logo" href="#"><i></i>Nails Trendy <span>Studio</span></a>
+  <div class="menu"><a href="#dich-vu">Dịch vụ</a><a href="#mau">Mẫu móng</a><a href="#ve-chung-toi">Về chúng tôi</a><a href="#dat-lich">Liên hệ</a></div>
+  <a class="btn" href="#dat-lich" style="padding:11px 22px">Đặt lịch</a>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <div class="hero-grid">
+    <div style="padding-top:40px">
+      <span class="lbl">Studio chăm sóc móng · Phong cách Bắc Âu</span>
+      <h1>Đơn giản.<br>Sạch sẽ.<br><b>Đẹp tự nhiên.</b></h1>
+      <p>Không gian sáng, gỗ sồi và cây xanh. Những bộ móng tối giản, nhẹ nhàng — giúp bạn tự tin mỗi ngày mà không cần cầu kỳ.</p>
+      <div class="acts"><a class="btn" href="#dat-lich">Đặt lịch hẹn <span class="ar">→</span></a><a class="btn light" href="#dich-vu">Xem dịch vụ</a></div>
+    </div>
+    <div class="tiles">
+      <div class="tile big"><div class="nail" style="background:#E9DCCB;height:80px"></div><div class="nail" style="background:#DCC7AE;height:100px"></div><div class="nail" style="background:#C9AE90;height:110px"></div><div class="nail" style="background:#E9DCCB;height:88px"></div><small>Milk &amp; Oat</small></div>
+      <div class="tile t2"><div class="nail" style="background:linear-gradient(180deg,#fff 0 28%,#EEE6DB 28%);width:36px;height:76px"></div><small>Soft French</small></div>
+      <div class="tile t3"><div class="nail" style="background:#A9B5A2;width:36px;height:76px"></div><small>Sage</small></div>
+    </div>
+  </div>
+  <div class="infobar">
+    <div><small>Giờ mở cửa</small><b>9:00 – 21:00</b></div>
+    <div><small>Địa chỉ</small><b>123 Hoa Hồng, Q.1</b></div>
+    <div><small>Điện thoại</small><b>0900 000 000</b></div>
+    <div><small>Đánh giá</small><b>4.9 ★ (2.100+)</b></div>
+  </div>
+</div></header>
+
+<section id="dich-vu"><div class="wrap">
+  <div class="sh"><div><span class="lbl">Dịch vụ</span><h2>Những gì chúng tôi làm tốt nhất</h2></div><p>Bảng giá minh bạch, đã bao gồm chăm sóc da và dưỡng móng. Không phụ thu.</p></div>
+  <div class="svc">
+    <div class="s"><span class="no">01</span><h3>Sơn gel</h3><p>Màu trơn tự nhiên, bền 3–4 tuần.</p><div class="pr">150.000đ <span>45 phút</span></div></div>
+    <div class="s feat"><span class="no">02 · Phổ biến nhất</span><h3>Úp móng + gel</h3><p>Form tự nhiên, mỏng nhẹ như móng thật.</p><div class="pr">250.000đ <span>60 phút</span></div></div>
+    <div class="s"><span class="no">03</span><h3>Đắp gel</h3><p>Nối dài chắc chắn, tinh tế.</p><div class="pr">350.000đ <span>90 phút</span></div></div>
+    <div class="s"><span class="no">04</span><h3>Spa chân</h3><p>Ngâm thảo mộc, tẩy da chết, massage.</p><div class="pr">200.000đ <span>50 phút</span></div></div>
+    <div class="s"><span class="no">05</span><h3>Nail art tối giản</h3><p>Line mảnh, chấm nhỏ, hoạ tiết nhẹ.</p><div class="pr">từ 20.000đ <span>/ móng</span></div></div>
+    <div class="s"><span class="no">06</span><h3>Combo Tay + Chân</h3><p>Gel tay và spa chân thư giãn.</p><div class="pr">320.000đ <span>100 phút</span></div></div>
+  </div>
+</div></section>
+
+<section id="mau" style="padding-top:0"><div class="wrap">
+  <div class="sh"><div><span class="lbl">Mẫu móng</span><h2>Bảng màu mùa này</h2></div><p>Kéo ngang để xem thêm →</p></div>
+  <div class="gal">
+    <div class="g" style="background:#EDE6DC"><div class="nail" style="background:#F1E9DF"></div><div class="nail" style="background:#F1E9DF;height:84px"></div><small>Milky White<span>Sơn gel</span></small></div>
+    <div class="g" style="background:#E3D6C4"><div class="nail" style="background:#C9AE90"></div><div class="nail" style="background:#B8987A;height:84px"></div><small>Oat Latte<span>Sơn gel</span></small></div>
+    <div class="g" style="background:#DCE1D7"><div class="nail" style="background:#A9B5A2"></div><div class="nail" style="background:#8E9C88;height:84px"></div><small>Sage Moss<span>Sơn gel</span></small></div>
+    <div class="g" style="background:#EEE6DB"><div class="nail" style="background:linear-gradient(180deg,#fff 0 28%,#EEE6DB 28%)"></div><div class="nail" style="background:linear-gradient(180deg,#fff 0 28%,#EEE6DB 28%);height:84px"></div><small>Soft French<span>Úp móng</span></small></div>
+    <div class="g" style="background:#E6E2DE"><div class="nail" style="background:linear-gradient(150deg,#fff,#D9D4CE 50%,#fff)"></div><div class="nail" style="background:linear-gradient(150deg,#fff,#D9D4CE 50%,#fff);height:84px"></div><small>Pearl Chrome<span>Tráng gương</span></small></div>
+    <div class="g" style="background:#E9DCD6"><div class="nail" style="background:#D7B3A8"></div><div class="nail" style="background:#C79A8D;height:84px"></div><small>Dusty Rose<span>Sơn gel</span></small></div>
+  </div>
+</div></section>
+
+<section class="values" id="ve-chung-toi"><div class="wrap">
+  <div class="sh"><div><span class="lbl">Về chúng tôi</span><h2>Ít hơn, nhưng tốt hơn</h2></div><p>Chúng tôi theo đuổi triết lý "lagom" của người Thuỵ Điển — vừa đủ, cân bằng và bền vững.</p></div>
+  <div class="vals">
+    <div class="v"><svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="15"/><path d="M13 20l5 5 9-10"/></svg><h3>Sạch tuyệt đối</h3><p>Dụng cụ tiệt trùng theo tiêu chuẩn châu Âu, dũa dùng một lần cho mỗi khách.</p></div>
+    <div class="v"><svg viewBox="0 0 40 40"><path d="M20 6c8 6 12 12 12 18a12 12 0 0 1-24 0c0-6 4-12 12-18z"/><path d="M20 16v16"/></svg><h3>Sản phẩm lành tính</h3><p>Ưu tiên sơn thuần chay, ít hoá chất, không mùi hắc, an toàn cho móng.</p></div>
+    <div class="v"><svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="15"/><path d="M20 11v9l6 4"/></svg><h3>Đúng giờ, không chờ</h3><p>Đặt lịch trước, đến là được phục vụ ngay. Tôn trọng thời gian của bạn.</p></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="sh"><div><span class="lbl">Khách hàng</span><h2>Lời nhận xét</h2></div><p>4.9 / 5 từ hơn 2.100 đánh giá trên Google.</p></div>
+  <div class="rvs">
+    <div class="rv"><p>"Không gian sáng sủa, yên tĩnh và thơm mùi gỗ. Mình thích sự tối giản ở đây — móng đẹp mà rất tự nhiên."</p><div class="who"><i></i><div>Ngọc Anh<small>Khách quen · 2 năm</small></div></div></div>
+    <div class="rv"><p>"Đặt lịch online, đến đúng giờ là làm luôn. Sơn gel giữ gần 4 tuần vẫn đẹp. Rất đáng tiền."</p><div class="who"><i style="background:var(--sage)"></i><div>Thu Hà<small>Khách mới</small></div></div></div>
+  </div>
+</div></section>
+
+<section id="dat-lich" style="padding-top:0"><div class="wrap book">
+  <div class="l">
+    <div><span class="lbl">Đặt lịch</span><h2 style="margin-top:16px">Hẹn gặp bạn tại studio</h2></div>
+    <ul>
+      <li><span>Địa chỉ</span>123 Đường Hoa Hồng, Q.1</li>
+      <li><span>Điện thoại</span>0900 000 000</li>
+      <li><span>Giờ mở cửa</span>9:00 – 21:00 mỗi ngày</li>
+    </ul>
+  </div>
+  <form onsubmit="event.preventDefault();alert('Đây là bản demo')">
+    <div class="two"><div><label>Họ tên</label><input placeholder="Tên của bạn"></div><div><label>Điện thoại</label><input placeholder="09xx xxx xxx"></div></div>
+    <div><label>Dịch vụ</label><div class="chips"><span class="on">Sơn gel</span><span>Úp móng</span><span>Đắp gel</span><span>Spa chân</span><span>Combo</span></div></div>
+    <div class="two"><div><label>Ngày</label><input type="date"></div><div><label>Giờ</label><input type="time"></div></div>
+    <button class="btn" style="justify-self:start">Xác nhận đặt lịch <span class="ar">→</span></button>
+  </form>
+</div></section>
+
+<footer><div class="wrap"><span>© 2026 Nails Trendy Studio</span><span>Instagram · Facebook · TikTok · Zalo</span></div></footer>
+<div class="demo-tag">Mẫu: <a href="1-paris.html">1 Paris</a><a class="on" href="2-nordic.html">2 Nordic</a><a href="3-milano.html">3 Milano</a></div>
+<script>document.querySelectorAll('.chips span').forEach(s=>s.onclick=()=>s.classList.toggle('on'))</script>
+</body>
+</html>

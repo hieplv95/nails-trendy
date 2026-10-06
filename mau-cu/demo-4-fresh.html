@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mẫu 4 · Modern Fresh</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&display=swap&subset=vietnamese" rel="stylesheet">
+<style>
+:root{--bg:#FFFFFF;--soft:#F3F6F2;--sage:#7C9A84;--sage-d:#5F7D68;--sage-l:#DDE7DF;--terra:#D98E73;--terra-l:#FBEAE3;--ink:#1D2822;--muted:#66736B;--line:#E4EAE5}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:'Be Vietnam Pro',sans-serif;line-height:1.65}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-weight:700;letter-spacing:-.02em;line-height:1.15}
+.tag{display:inline-flex;align-items:center;gap:8px;font-size:.82rem;font-weight:600;color:var(--sage-d);background:var(--sage-l);padding:6px 14px;border-radius:8px}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 26px;border-radius:12px;background:var(--ink);color:#fff;font-weight:600;font-size:.95rem;transition:.2s;border:0;cursor:pointer;font-family:inherit}
+.btn:hover{background:var(--sage-d)}
+.btn.terra{background:var(--terra)}.btn.terra:hover{background:#C77558}
+.btn.line{background:transparent;color:var(--ink);border:1.5px solid var(--line)}
+.btn.line:hover{border-color:var(--ink)}
+/* top bar + nav */
+.topbar{background:var(--sage-d);color:#fff;font-size:.82rem;text-align:center;padding:8px}
+nav{border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);z-index:20}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{font-weight:800;font-size:1.35rem;display:flex;align-items:center;gap:10px}
+.logo i{width:30px;height:30px;border-radius:50% 50% 8px 8px/60% 60% 8px 8px;background:linear-gradient(160deg,var(--terra),#E9B19C)}
+.menu{display:flex;gap:32px;font-size:.93rem;font-weight:500;color:var(--muted)}
+.menu a:hover{color:var(--ink)}
+/* hero */
+.hero{padding:64px 0 80px;background:linear-gradient(180deg,var(--soft),#fff)}
+.hero .wrap{display:grid;grid-template-columns:1.1fr 1fr;gap:56px;align-items:center}
+.hero h1{font-size:clamp(2.5rem,5vw,4rem);font-weight:800;margin:18px 0 20px}
+.hero h1 span{color:var(--sage)}
+.hero p{font-size:1.08rem;color:var(--muted);max-width:500px;margin-bottom:30px}
+.hero .actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:40px}
+.trust{display:flex;gap:36px}
+.trust b{font-size:1.7rem;font-weight:800;display:block;line-height:1.1}
+.trust span{font-size:.82rem;color:var(--muted)}
+.visual{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.tile{border-radius:22px;display:flex;align-items:center;justify-content:center;gap:10px;position:relative;overflow:hidden}
+.tile.t1{grid-row:span 2;background:var(--sage-l);height:440px}
+.tile.t2{background:var(--terra-l);height:212px}
+.tile.t3{background:#F2EEE6;height:212px}
+.nail{width:42px;height:90px;border-radius:50% 50% 12px 12px/60% 60% 12px 12px;position:relative;box-shadow:inset -5px -8px 12px rgba(0,0,0,.08),0 10px 18px -10px rgba(0,0,0,.25)}
+.nail::after{content:"";position:absolute;top:11px;left:9px;width:7px;height:28px;border-radius:8px;background:rgba(255,255,255,.5)}
+.float{position:absolute;left:-30px;bottom:30px;background:#fff;border-radius:16px;padding:16px 18px;box-shadow:0 20px 40px -20px rgba(29,40,34,.35);display:flex;gap:12px;align-items:center;font-size:.85rem}
+.float .dot{width:40px;height:40px;border-radius:12px;background:var(--sage-l);display:flex;align-items:center;justify-content:center;color:var(--sage-d);font-weight:800}
+.float b{display:block;font-size:.95rem}
+/* why */
+.why{padding:80px 0;border-bottom:1px solid var(--line)}
+.why .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.w{padding:8px 0}
+.w .ic{width:48px;height:48px;border-radius:14px;background:var(--soft);display:flex;align-items:center;justify-content:center;margin-bottom:16px;font-size:1.3rem}
+.w h3{font-size:1.05rem;margin-bottom:6px}
+.w p{font-size:.9rem;color:var(--muted)}
+section{padding:96px 0}
+.sh{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:44px;flex-wrap:wrap}
+.sh h2{font-size:clamp(2rem,3.8vw,2.8rem);margin-top:14px}
+.sh p{color:var(--muted);max-width:420px}
+/* services tabs */
+.tabs{display:inline-flex;background:var(--soft);padding:5px;border-radius:12px;gap:4px;margin-bottom:28px}
+.tabs button{border:0;background:transparent;padding:10px 20px;border-radius:9px;font:inherit;font-weight:600;font-size:.9rem;color:var(--muted);cursor:pointer}
+.tabs button.on{background:#fff;color:var(--ink);box-shadow:0 2px 8px rgba(0,0,0,.06)}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.svc{border:1px solid var(--line);border-radius:20px;padding:26px;display:flex;flex-direction:column;transition:.2s}
+.svc:hover{border-color:var(--sage);box-shadow:0 18px 40px -26px rgba(29,40,34,.35)}
+.svc .top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:12px}
+.svc h3{font-size:1.15rem}
+.svc .time{font-size:.78rem;color:var(--muted);background:var(--soft);padding:4px 10px;border-radius:6px;white-space:nowrap}
+.svc p{color:var(--muted);font-size:.9rem;flex:1;margin-bottom:20px}
+.svc .bot{display:flex;justify-content:space-between;align-items:center;padding-top:16px;border-top:1px solid var(--line)}
+.svc .pr{font-weight:800;font-size:1.2rem}
+.svc .add{font-size:.85rem;font-weight:600;color:var(--sage-d)}
+.svc.hot{background:var(--ink);color:#fff;border-color:var(--ink)}
+.svc.hot p,.svc.hot .time{color:#B9C5BD}.svc.hot .time{background:rgba(255,255,255,.08)}
+.svc.hot .bot{border-color:rgba(255,255,255,.12)}.svc.hot .add{color:var(--terra)}
+/* gallery */
+.gallery{background:var(--soft)}
+.gal{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.g{aspect-ratio:3/4;border-radius:18px;background:#fff;display:flex;align-items:center;justify-content:center;gap:8px;position:relative}
+.g .nail{width:30px;height:64px}
+.g small{position:absolute;left:12px;bottom:10px;font-size:.75rem;font-weight:600;color:var(--muted)}
+/* reviews + booking */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.rv{padding:24px 0;border-bottom:1px solid var(--line)}
+.rv .st{color:var(--terra);letter-spacing:2px;font-size:.9rem}
+.rv p{margin:8px 0;font-size:1.02rem}
+.rv small{color:var(--muted)}
+.score{display:flex;align-items:center;gap:20px;background:var(--sage-l);border-radius:20px;padding:24px;margin-bottom:10px}
+.score b{font-size:3rem;font-weight:800;line-height:1}
+.bk{background:#fff;border:1px solid var(--line);border-radius:24px;padding:32px;box-shadow:0 30px 60px -40px rgba(29,40,34,.4)}
+.bk h3{font-size:1.5rem;margin-bottom:4px}
+.bk > p{color:var(--muted);font-size:.92rem;margin-bottom:22px}
+.bk label{display:block;font-size:.8rem;font-weight:600;margin:14px 0 6px}
+input,select{width:100%;padding:13px 16px;border:1.5px solid var(--line);border-radius:12px;font:inherit;font-size:.95rem;color:var(--ink);outline:none;background:#fff}
+input:focus,select:focus{border-color:var(--sage)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.slots{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.slots span{text-align:center;padding:10px 0;border:1.5px solid var(--line);border-radius:10px;font-size:.88rem;font-weight:500;cursor:pointer}
+.slots span.on{border-color:var(--sage);background:var(--sage-l);color:var(--sage-d)}
+.slots span.off{color:#C2CAC4;text-decoration:line-through}
+/* footer */
+footer{background:var(--ink);color:#C9D2CC;padding:60px 0 90px}
+footer .wrap{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:30px;font-size:.9rem}
+footer h4{color:#fff;margin-bottom:12px;font-size:.95rem}
+footer li{list-style:none;margin-bottom:6px}
+footer .logo{color:#fff;margin-bottom:12px}
+.demo-tag{position:fixed;left:16px;bottom:16px;z-index:50;background:var(--terra);color:#fff;font-size:.78rem;padding:8px 14px;border-radius:30px;display:flex;gap:10px}
+.demo-tag a{opacity:.7}.demo-tag a.on,.demo-tag a:hover{opacity:1;text-decoration:underline}
+@media(max-width:900px){
+  .menu{display:none}
+  .hero .wrap,.split{grid-template-columns:1fr}
+  .tile.t1{height:300px}.tile.t2,.tile.t3{height:142px}
+  .float{left:10px;bottom:-20px}
+  .why .grid{grid-template-columns:1fr 1fr}
+  .svc-grid{grid-template-columns:1fr}
+  .gal{grid-template-columns:repeat(2,1fr)}
+  .gal .g:nth-child(5){display:none}
+  footer .wrap{grid-template-columns:1fr 1fr}
+  section{padding:70px 0}
+  .trust{gap:22px}
+}
+</style>
+</head>
+<body>
+<div class="topbar">🌿 Ưu đãi tháng 10: Giảm 15% combo Tay + Chân khi đặt lịch online</div>
+<nav><div class="wrap">
+  <a class="logo" href="#"><i></i>Rosé Nails</a>
+  <div class="menu"><a href="#dich-vu">Dịch vụ</a><a href="#bo-suu-tap">Mẫu móng</a><a href="#danh-gia">Đánh giá</a><a href="#dat-lich">Liên hệ</a></div>
+  <a class="btn" href="#dat-lich" style="padding:11px 20px">Đặt lịch online</a>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <div>
+    <span class="tag">● Đang mở cửa · 9:00 – 21:00</span>
+    <h1>Chăm sóc móng<br>chuẩn <span>salon</span>, giá<br>dễ chịu.</h1>
+    <p>Đặt lịch trong 30 giây, đến là làm ngay. Sản phẩm an toàn, dụng cụ tiệt trùng riêng và thợ giàu kinh nghiệm.</p>
+    <div class="actions"><a class="btn terra" href="#dat-lich">Đặt lịch ngay →</a><a class="btn line" href="#dich-vu">Xem bảng giá</a></div>
+    <div class="trust"><div><b>12.000+</b><span>Khách hàng</span></div><div><b>4.9/5</b><span>Google Maps</span></div><div><b>15'</b><span>Xác nhận lịch</span></div></div>
+  </div>
+  <div class="visual">
+    <div class="tile t1"><div class="nail" style="background:#7C9A84;height:78px"></div><div class="nail" style="background:#9DB5A3;height:100px"></div><div class="nail" style="background:#D98E73;height:112px"></div><div class="nail" style="background:#E9C2B1;height:94px"></div></div>
+    <div class="tile t2"><div class="nail" style="background:linear-gradient(180deg,#fff 0 30%,#F4D8CC 30%)"></div><div class="nail" style="background:linear-gradient(180deg,#fff 0 30%,#F4D8CC 30%);height:76px"></div></div>
+    <div class="tile t3"><div class="nail" style="background:#C8B59A"></div><div class="nail" style="background:#A88E70;height:76px"></div></div>
+    <div class="float"><div class="dot">✓</div><div><b>Lịch hẹn đã xác nhận</b>Thứ 7 · 14:30 · Sơn gel</div></div>
+  </div>
+</div></header>
+
+<div class="why"><div class="wrap"><div class="grid">
+  <div class="w"><div class="ic">🧼</div><h3>Tiệt trùng chuẩn y tế</h3><p>Dụng cụ hấp sấy, dũa dùng 1 lần cho mỗi khách.</p></div>
+  <div class="w"><div class="ic">🌿</div><h3>Sản phẩm an toàn</h3><p>Sơn chính hãng, không mùi hắc, thân thiện với móng.</p></div>
+  <div class="w"><div class="ic">⏱️</div><h3>Không phải chờ</h3><p>Đặt lịch online, đến đúng giờ là được phục vụ.</p></div>
+  <div class="w"><div class="ic">🛡️</div><h3>Bảo hành 7 ngày</h3><p>Bong tróc, gãy móng được sửa miễn phí.</p></div>
+</div></div></div>
+
+<section id="dich-vu"><div class="wrap">
+  <div class="sh"><div><span class="tag">Bảng giá</span><h2>Dịch vụ phổ biến</h2></div><p>Giá đã bao gồm cắt da, dũa form và dưỡng. Không phụ thu.</p></div>
+  <div class="tabs"><button class="on">Tay</button><button>Chân</button><button>Combo</button><button>Nail art</button></div>
+  <div class="svc-grid">
+    <div class="svc"><div class="top"><h3>Sơn gel trơn</h3><span class="time">45 phút</span></div><p>Màu bền 3–4 tuần, hơn 200 màu cho bạn lựa chọn.</p><div class="bot"><span class="pr">150.000đ</span><a class="add" href="#dat-lich">Đặt →</a></div></div>
+    <div class="svc hot"><div class="top"><h3>Úp móng + sơn gel</h3><span class="time">60 phút</span></div><p>Được chọn nhiều nhất. Form tự nhiên, nhọn hoặc ballerina.</p><div class="bot"><span class="pr">250.000đ</span><a class="add" href="#dat-lich">Đặt →</a></div></div>
+    <div class="svc"><div class="top"><h3>Đắp gel / bột</h3><span class="time">90 phút</span></div><p>Nối dài chắc chắn, mỏng nhẹ, tự nhiên như móng thật.</p><div class="bot"><span class="pr">350.000đ</span><a class="add" href="#dat-lich">Đặt →</a></div></div>
+    <div class="svc"><div class="top"><h3>Sơn mắt mèo</h3><span class="time">50 phút</span></div><p>Hiệu ứng ánh kim lấp lánh, thay đổi theo góc nhìn.</p><div class="bot"><span class="pr">200.000đ</span><a class="add" href="#dat-lich">Đặt →</a></div></div>
+    <div class="svc"><div class="top"><h3>Tháo gel cũ</h3><span class="time">20 phút</span></div><p>Tháo nhẹ nhàng, không làm mỏng móng thật.</p><div class="bot"><span class="pr">50.000đ</span><a class="add" href="#dat-lich">Đặt →</a></div></div>
+    <div class="svc"><div class="top"><h3>Dưỡng paraffin</h3><span class="time">30 phút</span></div><p>Cấp ẩm sâu, tay mềm mịn sau một lần làm.</p><div class="bot"><span class="pr">120.000đ</span><a class="add" href="#dat-lich">Đặt →</a></div></div>
+  </div>
+</div></section>
+
+<section class="gallery" id="bo-suu-tap"><div class="wrap">
+  <div class="sh"><div><span class="tag">Bộ sưu tập</span><h2>Mẫu móng mới nhất</h2></div><a class="btn line" href="#">Xem thêm trên Instagram</a></div>
+  <div class="gal">
+    <div class="g"><div class="nail" style="background:#9DB5A3"></div><div class="nail" style="background:#9DB5A3;height:76px"></div><small>Sage Green</small></div>
+    <div class="g"><div class="nail" style="background:#D98E73"></div><div class="nail" style="background:#E9C2B1;height:76px"></div><small>Terracotta</small></div>
+    <div class="g"><div class="nail" style="background:linear-gradient(180deg,#fff 0 30%,#F4D8CC 30%)"></div><div class="nail" style="background:linear-gradient(180deg,#fff 0 30%,#F4D8CC 30%);height:76px"></div><small>French</small></div>
+    <div class="g"><div class="nail" style="background:linear-gradient(150deg,#fff,#CFC3B0 50%,#fff)"></div><div class="nail" style="background:linear-gradient(150deg,#fff,#CFC3B0 50%,#fff);height:76px"></div><small>Chrome</small></div>
+    <div class="g"><div class="nail" style="background:#C8B59A"></div><div class="nail" style="background:#A88E70;height:76px"></div><small>Latte</small></div>
+  </div>
+</div></section>
+
+<section id="danh-gia"><div class="wrap split">
+  <div id="danh-gia-list">
+    <span class="tag">Đánh giá</span><h2 style="font-size:clamp(2rem,3.8vw,2.8rem);margin:14px 0 24px">Khách hàng tin chọn</h2>
+    <div class="score"><b>4.9</b><div><div style="color:var(--terra);letter-spacing:3px">★★★★★</div><small style="color:var(--muted)">Từ 2.140 đánh giá trên Google</small></div></div>
+    <div class="rv"><div class="st">★★★★★</div><p>"Đặt lịch online rất tiện, đến là làm luôn. Thợ tư vấn màu rất có gu."</p><small>Ngọc Anh · 2 ngày trước</small></div>
+    <div class="rv"><div class="st">★★★★★</div><p>"Tiệm sạch sẽ, không mùi sơn nồng. Móng úp giữ form gần một tháng."</p><small>Thu Hà · 1 tuần trước</small></div>
+  </div>
+  <div id="dat-lich" class="bk">
+    <h3>Đặt lịch hẹn</h3>
+    <p>📍 123 Đường Hoa Hồng, Quận 1 · 📞 0900 000 000</p>
+    <form onsubmit="event.preventDefault();alert('Đây là bản demo')">
+      <div class="two"><div><label>Họ tên</label><input placeholder="Nguyễn Văn A"></div><div><label>Số điện thoại</label><input placeholder="09xx xxx xxx"></div></div>
+      <label>Dịch vụ</label><select><option>Úp móng + sơn gel — 250.000đ</option><option>Sơn gel trơn — 150.000đ</option><option>Đắp gel / bột — 350.000đ</option><option>Spa chân — 200.000đ</option></select>
+      <label>Ngày</label><input type="date">
+      <label>Khung giờ trống</label>
+      <div class="slots"><span>09:30</span><span class="off">11:00</span><span class="on">14:30</span><span>16:00</span><span class="off">17:30</span><span>18:00</span><span>19:30</span><span>20:00</span></div>
+      <button class="btn terra" style="width:100%;justify-content:center;margin-top:22px">Xác nhận đặt lịch</button>
+    </form>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <div><div class="logo"><i></i>Rosé Nails</div><p>Chăm sóc móng chuẩn salon — an toàn, nhanh gọn, giá dễ chịu.</p></div>
+  <div><h4>Liên hệ</h4><ul><li>123 Đường Hoa Hồng, Q.1</li><li>0900 000 000</li><li>9:00 – 21:00</li></ul></div>
+  <div><h4>Dịch vụ</h4><ul><li>Sơn gel</li><li>Úp móng</li><li>Spa chân</li></ul></div>
+  <div><h4>Theo dõi</h4><ul><li>Facebook</li><li>Instagram</li><li>TikTok</li></ul></div>
+</div></footer>
+<div class="demo-tag">Mẫu: <a href="demo-1-blush.html">1</a><a href="demo-2-minimal.html">2</a><a href="demo-3-pastel.html">3</a><a class="on" href="demo-4-fresh.html">4</a></div>
+</body>
+</html>

@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mẫu 2 · Minimal Nude</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500&display=swap&subset=vietnamese" rel="stylesheet">
+<style>
+:root{--bg:#FAF7F2;--sand:#EFE7DC;--taupe:#A08C7A;--clay:#B9866B;--ink:#1F1B18;--muted:#6F655D;--line:#DDD3C6}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:'Inter',sans-serif;font-weight:300;line-height:1.7;font-size:15px}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1240px;margin:0 auto;padding:0 32px}
+.serif{font-family:'Cormorant Garamond',serif;font-weight:400}
+.label{font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;color:var(--taupe);font-weight:500}
+.link{display:inline-flex;align-items:center;gap:12px;font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;font-weight:500;border-bottom:1px solid var(--ink);padding-bottom:6px;transition:.25s}
+.link:hover{gap:20px}
+.btn{display:inline-block;background:var(--ink);color:var(--bg);padding:16px 34px;font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;font-weight:500;transition:.25s}
+.btn:hover{background:var(--clay)}
+/* nav */
+nav{border-bottom:1px solid var(--line)}
+nav .wrap{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;height:84px}
+.menu{display:flex;gap:30px;font-size:.75rem;letter-spacing:.18em;text-transform:uppercase}
+.menu a:hover{color:var(--clay)}
+.logo{font-family:'Cormorant Garamond',serif;font-size:1.9rem;letter-spacing:.3em;text-transform:uppercase}
+.nav-r{justify-self:end;display:flex;gap:28px;align-items:center;font-size:.8rem}
+/* hero */
+.hero{padding:70px 0 0}
+.hero-top{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;margin-bottom:50px}
+.hero h1{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(3.2rem,8.5vw,8rem);line-height:.95;letter-spacing:-.02em}
+.hero h1 i{color:var(--clay)}
+.hero-side{max-width:320px;padding-bottom:14px}
+.hero-side p{color:var(--muted);margin:14px 0 28px}
+.hero-band{display:grid;grid-template-columns:2fr 1fr 1fr;gap:16px;height:440px}
+.ph{position:relative;display:flex;align-items:flex-end;justify-content:center;gap:12px;padding-bottom:60px;overflow:hidden}
+.ph .cap{position:absolute;left:20px;top:18px;font-size:.7rem;letter-spacing:.25em;text-transform:uppercase;color:var(--muted)}
+.nail{width:44px;height:96px;border-radius:50% 50% 12px 12px/60% 60% 12px 12px;position:relative;box-shadow:inset -5px -8px 12px rgba(0,0,0,.08)}
+.nail::after{content:"";position:absolute;top:12px;left:9px;width:7px;height:30px;border-radius:8px;background:rgba(255,255,255,.5)}
+/* intro */
+.intro{padding:120px 0;display:grid;grid-template-columns:1fr 2fr;gap:60px;border-bottom:1px solid var(--line)}
+.intro p.big{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3vw,2.4rem);line-height:1.35}
+.intro p.big i{color:var(--clay)}
+.stats{display:flex;gap:60px;margin-top:50px}
+.stats b{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:3rem;display:block;line-height:1}
+.stats span{font-size:.78rem;color:var(--muted);letter-spacing:.1em}
+/* services */
+.services{padding:120px 0}
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:60px;gap:30px}
+.sec-head h2{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(2.4rem,5vw,4rem);line-height:1}
+.row{display:grid;grid-template-columns:80px 1.3fr 2fr 140px;gap:30px;align-items:baseline;padding:30px 0;border-top:1px solid var(--line);transition:.3s}
+.row:last-child{border-bottom:1px solid var(--line)}
+.row:hover{background:var(--sand);padding-left:20px;padding-right:20px}
+.row .no{font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--taupe)}
+.row h3{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:1.9rem}
+.row p{color:var(--muted);font-size:.92rem}
+.row .pr{text-align:right;font-weight:400}
+/* gallery */
+.gallery{padding:0 0 120px}
+.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.gal .ph{height:380px;padding-bottom:70px}
+.gal .ph:nth-child(2){margin-top:60px}
+.gal .ph .cap{top:auto;bottom:18px}
+/* quote */
+.quote{background:var(--sand);padding:130px 0;text-align:center}
+.quote blockquote{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(1.8rem,3.6vw,3rem);line-height:1.3;max-width:900px;margin:24px auto}
+.quote .dots{display:flex;gap:8px;justify-content:center;margin-top:30px}
+.quote .dots i{width:28px;height:2px;background:var(--line)}
+.quote .dots i:first-child{background:var(--ink)}
+/* contact */
+.contact{padding:120px 0;display:grid;grid-template-columns:1fr 1fr;gap:80px}
+.contact h2{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(2.4rem,5vw,4rem);line-height:1;margin:16px 0 30px}
+.contact dl{display:grid;grid-template-columns:130px 1fr;gap:18px 20px;font-size:.95rem}
+.contact dt{color:var(--taupe);font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;padding-top:4px}
+form{display:flex;flex-direction:column;gap:6px}
+input,select,textarea{width:100%;padding:18px 0;border:0;border-bottom:1px solid var(--line);background:transparent;font:inherit;color:var(--ink);outline:none}
+input:focus,select:focus,textarea:focus{border-color:var(--ink)}
+form .two{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+form .btn{margin-top:26px;border:0;cursor:pointer;align-self:flex-start}
+footer{border-top:1px solid var(--line);padding:36px 0 90px}
+footer .wrap{display:flex;justify-content:space-between;font-size:.75rem;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);flex-wrap:wrap;gap:16px}
+.demo-tag{position:fixed;left:16px;bottom:16px;z-index:50;background:var(--ink);color:#fff;font-size:.78rem;padding:8px 14px;border-radius:30px;display:flex;gap:10px}
+.demo-tag a{opacity:.6}.demo-tag a.on,.demo-tag a:hover{opacity:1;text-decoration:underline}
+@media(max-width:860px){
+  .wrap{padding:0 20px}
+  nav .wrap{grid-template-columns:1fr auto}
+  .menu,.nav-r a:not(.btn){display:none}
+  .logo{font-size:1.4rem}
+  .hero-top,.sec-head{flex-direction:column;align-items:flex-start}
+  .hero-band{grid-template-columns:1fr 1fr;height:auto}
+  .hero-band .ph{height:260px}.hero-band .ph:first-child{grid-column:1/-1}
+  .intro,.contact{grid-template-columns:1fr;padding:80px 0;gap:30px}
+  .stats{gap:30px}
+  .row{grid-template-columns:40px 1fr;gap:6px 16px}
+  .row p,.row .pr{grid-column:2;text-align:left}
+  .gal{grid-template-columns:1fr}.gal .ph:nth-child(2){margin-top:0}
+  .services{padding:80px 0}
+}
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+  <div class="menu"><a href="#dich-vu">Dịch vụ</a><a href="#bo-suu-tap">Bộ sưu tập</a><a href="#lien-he">Liên hệ</a></div>
+  <a class="logo" href="#">Rosé</a>
+  <div class="nav-r"><a href="tel:0900000000">0900 000 000</a><a class="btn" href="#lien-he" style="padding:12px 22px">Đặt lịch</a></div>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <div class="label">Nail Atelier — Est. 2018</div>
+  <div class="hero-top">
+    <h1>Vẻ đẹp<br>trong <i>sự tối giản</i></h1>
+    <div class="hero-side">
+      <p>Những bộ móng thanh lịch, tinh tế — được tạo nên bằng sự tỉ mỉ và chất liệu cao cấp nhất.</p>
+      <a class="link" href="#lien-he">Đặt lịch hẹn <span>→</span></a>
+    </div>
+  </div>
+  <div class="hero-band">
+    <div class="ph" style="background:linear-gradient(180deg,#EFE4D6,#E0CFBB)"><span class="cap">Bộ sưu tập Thu 2026</span>
+      <div class="nail" style="background:#C8A288;height:80px"></div><div class="nail" style="background:#B9866B;height:100px"></div><div class="nail" style="background:#D9BFA9;height:112px"></div><div class="nail" style="background:#A9745A;height:96px"></div><div class="nail" style="background:#E6D3C2;height:74px"></div></div>
+    <div class="ph" style="background:#E8E1D8"><span class="cap">French</span><div class="nail" style="background:linear-gradient(180deg,#fff 0 30%,#EADCCD 30%)"></div></div>
+    <div class="ph" style="background:#D8C6B4"><span class="cap">Mocha</span><div class="nail" style="background:#6E4F3E"></div></div>
+  </div>
+</div></header>
+
+<div class="wrap"><div class="intro">
+  <div class="label">Về chúng tôi</div>
+  <div>
+    <p class="big">Chúng tôi tin rằng một bộ móng đẹp không cần cầu kỳ — chỉ cần <i>đúng</i> với bạn. Mỗi lần ghé Rosé là một khoảng lặng nhỏ để bạn chăm sóc bản thân.</p>
+    <div class="stats"><div><b>8</b><span>Năm kinh nghiệm</span></div><div><b>12k+</b><span>Khách hàng</span></div><div><b>4.9</b><span>Đánh giá Google</span></div></div>
+  </div>
+</div></div>
+
+<section class="services" id="dich-vu"><div class="wrap">
+  <div class="sec-head"><h2>Dịch vụ</h2><span class="label">Bảng giá cập nhật 10/2026</span></div>
+  <div class="row"><span class="no">01</span><h3>Sơn gel</h3><p>Sơn gel cao cấp, bền màu 3–4 tuần. Bao gồm cắt da, dũa form.</p><span class="pr">150.000đ</span></div>
+  <div class="row"><span class="no">02</span><h3>Úp móng</h3><p>Móng úp form tự nhiên, nhọn, vuông hoặc ballerina, kèm sơn gel.</p><span class="pr">250.000đ</span></div>
+  <div class="row"><span class="no">03</span><h3>Đắp gel / bột</h3><p>Nối dài chắc chắn, mỏng nhẹ, tự nhiên như móng thật.</p><span class="pr">350.000đ</span></div>
+  <div class="row"><span class="no">04</span><h3>Nail art</h3><p>Vẽ tay, đính đá, tráng gương, ombre — theo yêu cầu.</p><span class="pr">từ 20.000đ</span></div>
+  <div class="row"><span class="no">05</span><h3>Spa chân</h3><p>Ngâm thảo dược, tẩy tế bào chết, massage 30 phút.</p><span class="pr">200.000đ</span></div>
+</div></section>
+
+<section class="gallery" id="bo-suu-tap"><div class="wrap">
+  <div class="sec-head"><h2>Bộ sưu tập</h2><a class="link" href="#">Xem Instagram →</a></div>
+  <div class="gal">
+    <div class="ph" style="background:#EDE3D7"><span class="cap">Milky Nude</span><div class="nail" style="background:#F1E6DA"></div><div class="nail" style="background:#F1E6DA;height:110px"></div><div class="nail" style="background:#F1E6DA"></div></div>
+    <div class="ph" style="background:#DCCDBE"><span class="cap">Chrome Pearl</span><div class="nail" style="background:linear-gradient(135deg,#fff,#E3D7CF,#fff,#D6C6BA)"></div><div class="nail" style="background:linear-gradient(135deg,#fff,#E3D7CF,#fff,#D6C6BA);height:110px"></div></div>
+    <div class="ph" style="background:#E6DCD0"><span class="cap">Terracotta</span><div class="nail" style="background:#B9664A"></div><div class="nail" style="background:#C98D72;height:110px"></div><div class="nail" style="background:#B9664A"></div></div>
+  </div>
+</div></section>
+
+<section class="quote"><div class="wrap">
+  <div class="label">Khách hàng nói</div>
+  <blockquote>"Tiệm nail đẹp và yên tĩnh nhất mình từng đến. Thợ làm cực kỳ tỉ mỉ, móng giữ được gần một tháng."</blockquote>
+  <div class="label" style="color:var(--ink)">Ngọc Anh — Quận 3</div>
+  <div class="dots"><i></i><i></i><i></i></div>
+</div></section>
+
+<div class="wrap"><section class="contact" id="lien-he">
+  <div>
+    <div class="label">Liên hệ</div>
+    <h2>Hẹn gặp bạn<br>tại Rosé</h2>
+    <dl>
+      <dt>Địa chỉ</dt><dd>123 Đường Hoa Hồng, Quận 1, TP.HCM</dd>
+      <dt>Hotline</dt><dd>0900 000 000</dd>
+      <dt>Giờ mở cửa</dt><dd>Thứ 2 – Chủ nhật, 9:00 – 21:00</dd>
+      <dt>Mạng xã hội</dt><dd>Instagram · Facebook · TikTok</dd>
+    </dl>
+  </div>
+  <form onsubmit="event.preventDefault();alert('Đây là bản demo')">
+    <div class="two"><input placeholder="Họ và tên"><input placeholder="Số điện thoại"></div>
+    <select><option>Dịch vụ</option><option>Sơn gel</option><option>Úp móng</option><option>Đắp gel / bột</option><option>Spa chân</option></select>
+    <div class="two"><input type="date"><input type="time"></div>
+    <textarea rows="2" placeholder="Ghi chú"></textarea>
+    <button class="btn">Gửi yêu cầu đặt lịch</button>
+  </form>
+</section></div>
+
+<footer><div class="wrap"><span>© 2026 Rosé Nail Atelier</span><span>Instagram · Facebook · TikTok</span></div></footer>
+<div class="demo-tag">Mẫu: <a href="demo-1-blush.html">1</a><a class="on" href="demo-2-minimal.html">2</a><a href="demo-3-pastel.html">3</a><a href="demo-4-fresh.html">4</a></div>
+</body>
+</html>

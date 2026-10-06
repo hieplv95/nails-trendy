@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mẫu 3 · Pastel Playful</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Pacifico&display=swap&subset=vietnamese" rel="stylesheet">
+<style>
+:root{--bg:#FFFCF9;--lilac:#E9E0FC;--mint:#D6F3E6;--peach:#FFE3D5;--butter:#FFF1C2;--pink:#FFD9E6;--ink:#3A3254;--muted:#776F90;--accent:#8A6CDB;--accent-d:#7354C7}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:'Quicksand',sans-serif;font-weight:500;line-height:1.65;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-weight:700;line-height:1.15}
+.hand{font-family:'Pacifico',cursive;font-weight:400}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:999px;background:var(--accent);color:#fff;font-weight:700;box-shadow:0 6px 0 var(--accent-d);transition:.15s}
+.btn:hover{transform:translateY(2px);box-shadow:0 4px 0 var(--accent-d)}
+.btn.alt{background:#fff;color:var(--ink);box-shadow:0 6px 0 #E3DDF0;border:2px solid #E3DDF0}
+.chip{display:inline-block;padding:6px 16px;border-radius:999px;background:var(--butter);font-size:.85rem;font-weight:700}
+/* nav */
+nav{padding:18px 0}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;background:#fff;border-radius:999px;padding:10px 12px 10px 26px;box-shadow:0 8px 30px -14px rgba(58,50,84,.25)}
+.logo{font-family:'Pacifico',cursive;font-size:1.5rem;color:var(--accent)}
+.menu{display:flex;gap:6px}
+.menu a{padding:8px 16px;border-radius:999px;font-weight:600;font-size:.95rem}
+.menu a:hover{background:var(--lilac)}
+/* hero */
+.hero{padding:50px 0 90px;position:relative}
+.blob{position:absolute;border-radius:50%;filter:blur(2px);z-index:-1}
+.hero .wrap{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+.hero h1{font-size:clamp(2.6rem,5.4vw,4.4rem);margin:18px 0}
+.hero h1 .hand{color:var(--accent);font-size:.9em}
+.hero p{font-size:1.1rem;color:var(--muted);max-width:470px;margin-bottom:32px}
+.hero .actions{display:flex;gap:16px;flex-wrap:wrap}
+.hero-card{position:relative;aspect-ratio:1;max-width:500px;justify-self:center;width:100%}
+.circle{position:absolute;inset:0;border-radius:44% 56% 52% 48%/48% 42% 58% 52%;background:linear-gradient(135deg,var(--lilac),var(--pink) 50%,var(--peach))}
+.hand-row{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;gap:14px}
+.nail{width:48px;height:100px;border-radius:50% 50% 16px 16px/60% 60% 16px 16px;position:relative;box-shadow:inset -6px -8px 12px rgba(0,0,0,.06),0 10px 18px -8px rgba(58,50,84,.3);border:3px solid #fff}
+.nail::after{content:"";position:absolute;top:10px;left:9px;width:8px;height:28px;border-radius:8px;background:rgba(255,255,255,.65)}
+.sticker{position:absolute;background:#fff;border-radius:20px;padding:10px 16px;font-weight:700;font-size:.9rem;box-shadow:0 10px 24px -12px rgba(58,50,84,.35);display:flex;align-items:center;gap:8px}
+.sticker i{width:26px;height:26px;border-radius:50%;display:inline-block}
+.s1{top:8%;left:-2%;transform:rotate(-6deg)}.s2{bottom:12%;right:-4%;transform:rotate(5deg)}.s3{bottom:-2%;left:12%;transform:rotate(-3deg)}
+/* marquee */
+.strip-wrap{overflow:hidden;padding:12px 0}
+.strip{background:var(--ink);color:#fff;padding:16px 0;overflow:hidden;white-space:nowrap;transform:rotate(-1.5deg);margin:0 -20px}
+.strip div{display:inline-block;animation:mq 25s linear infinite;font-weight:700;font-size:1.1rem}
+.strip span{margin:0 26px}
+.strip span:nth-child(even){color:var(--butter)}
+@keyframes mq{to{transform:translateX(-50%)}}
+section{padding:100px 0}
+.head{text-align:center;margin-bottom:54px}
+.head h2{font-size:clamp(2rem,4vw,3rem);margin-top:12px}
+.head p{color:var(--muted);margin-top:8px}
+/* services */
+.svc{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.card{border-radius:28px;padding:30px 24px;transition:.25s;position:relative}
+.card:hover{transform:translateY(-6px) rotate(-1deg)}
+.card .ico{width:58px;height:58px;border-radius:18px;background:#fff;display:flex;align-items:center;justify-content:center;margin-bottom:20px}
+.card .ico .nail{width:20px;height:38px;border-width:2px}
+.card .ico .nail::after{display:none}
+.card h3{font-size:1.25rem;margin-bottom:8px}
+.card p{font-size:.92rem;color:var(--muted);margin-bottom:18px}
+.card .pr{font-weight:700;font-size:1.15rem}
+.card .pr small{font-weight:500;color:var(--muted);font-size:.8rem}
+/* gallery */
+.gal-wrap{background:var(--lilac);border-radius:48px;padding:70px 50px}
+.filters{display:flex;gap:10px;justify-content:center;margin-bottom:36px;flex-wrap:wrap}
+.filters span{padding:8px 20px;border-radius:999px;background:#fff;font-weight:700;font-size:.9rem;cursor:pointer}
+.filters span.on{background:var(--ink);color:#fff}
+.gal{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.g{aspect-ratio:3/4;border-radius:26px;background:#fff;display:flex;align-items:center;justify-content:center;gap:8px;position:relative}
+.g .nail{width:34px;height:70px}
+.g b{position:absolute;bottom:14px;font-size:.85rem}
+.g .heart{position:absolute;top:12px;right:14px;font-size:1rem;color:#F28AB2}
+/* reviews */
+.rv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.rv{background:#fff;border:2px solid #EFEAF8;border-radius:28px;padding:28px}
+.rv .top{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.av{width:46px;height:46px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700}
+.rv .stars{color:#F5B83D;font-size:.9rem}
+.rv p{color:var(--muted)}
+/* booking */
+.book{background:linear-gradient(135deg,var(--mint),var(--butter));border-radius:48px;padding:64px;display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+.book h2{font-size:clamp(2rem,4vw,3rem);margin:12px 0}
+.book p{color:var(--muted);margin-bottom:22px}
+.book ul{list-style:none;display:grid;gap:10px}
+.book li{background:rgba(255,255,255,.7);border-radius:16px;padding:12px 18px;font-weight:600}
+form{background:#fff;border-radius:32px;padding:30px;display:grid;gap:14px;box-shadow:0 20px 40px -24px rgba(58,50,84,.3)}
+form .two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+input,select{width:100%;padding:14px 18px;border:2px solid #EFEAF8;border-radius:16px;font:inherit;color:var(--ink);background:var(--bg);outline:none}
+input:focus,select:focus{border-color:var(--accent)}
+.pills{display:flex;gap:8px;flex-wrap:wrap}
+.pills label{padding:8px 14px;border-radius:999px;border:2px solid #EFEAF8;font-size:.88rem;cursor:pointer}
+.pills input{display:none}
+.pills input:checked+span{color:var(--accent)}
+.pills label:has(input:checked){border-color:var(--accent);background:var(--lilac)}
+footer{padding:60px 0 90px;text-align:center;color:var(--muted)}
+footer .logo{font-size:2rem;display:block;margin-bottom:6px}
+.demo-tag{position:fixed;left:16px;bottom:16px;z-index:50;background:var(--ink);color:#fff;font-size:.78rem;padding:8px 14px;border-radius:30px;display:flex;gap:10px}
+.demo-tag a{opacity:.6}.demo-tag a.on,.demo-tag a:hover{opacity:1;text-decoration:underline}
+@media(max-width:900px){
+  .menu{display:none}
+  .hero .wrap,.book{grid-template-columns:1fr}
+  .svc,.gal{grid-template-columns:1fr 1fr}
+  .rv-grid{grid-template-columns:1fr}
+  .gal-wrap{padding:40px 18px;border-radius:32px}
+  .book{padding:34px 20px;border-radius:32px;grid-template-columns:minmax(0,1fr)}
+  form .two{grid-template-columns:1fr}
+  section{padding:70px 0}
+  .nail{width:38px;height:82px}
+}
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+  <a class="logo" href="#">Rosé Nails</a>
+  <div class="menu"><a href="#dich-vu">Dịch vụ</a><a href="#bo-suu-tap">Mẫu nail</a><a href="#danh-gia">Đánh giá</a><a href="#dat-lich">Liên hệ</a></div>
+  <a class="btn" href="#dat-lich" style="padding:10px 22px">Đặt lịch ✿</a>
+</div></nav>
+
+<header class="hero">
+  <div class="blob" style="width:300px;height:300px;background:var(--mint);top:40px;left:-120px"></div>
+  <div class="blob" style="width:220px;height:220px;background:var(--butter);bottom:30px;left:40%"></div>
+  <div class="wrap">
+    <div>
+      <span class="chip">✨ Giảm 20% cho khách mới</span>
+      <h1>Móng xinh <span class="hand">vui</span><br>cả ngày dài!</h1>
+      <p>Hàng trăm mẫu nail dễ thương, màu pastel ngọt ngào và cực hợp trend. Đến chơi, chọn màu và để tụi mình lo phần còn lại nha!</p>
+      <div class="actions"><a class="btn" href="#dat-lich">Đặt lịch liền ✿</a><a class="btn alt" href="#bo-suu-tap">Xem mẫu nail</a></div>
+    </div>
+    <div class="hero-card">
+      <div class="circle"></div>
+      <div class="hand-row">
+        <div class="nail" style="background:#C9B6F6;height:84px"></div>
+        <div class="nail" style="background:#FFB8CF;height:106px"></div>
+        <div class="nail" style="background:#A8E3C8;height:118px"></div>
+        <div class="nail" style="background:#FFD59A;height:102px"></div>
+        <div class="nail" style="background:#9FD3F5;height:78px"></div>
+      </div>
+      <div class="sticker s1"><i style="background:#FFB8CF"></i>200+ màu sơn</div>
+      <div class="sticker s2">⭐ 4.9 / 5 điểm</div>
+      <div class="sticker s3"><i style="background:#A8E3C8"></i>An toàn cho móng</div>
+    </div>
+  </div>
+</header>
+
+<div class="strip-wrap"><div class="strip"><div><span>Sơn gel</span><span>✿</span><span>Úp móng</span><span>✿</span><span>Nail art</span><span>✿</span><span>Spa chân</span><span>✿</span><span>Đính đá</span><span>✿</span><span>Mắt mèo</span><span>✿</span><span>Sơn gel</span><span>✿</span><span>Úp móng</span><span>✿</span><span>Nail art</span><span>✿</span><span>Spa chân</span><span>✿</span><span>Đính đá</span><span>✿</span><span>Mắt mèo</span><span>✿</span></div></div></div>
+
+<section id="dich-vu"><div class="wrap">
+  <div class="head"><span class="chip" style="background:var(--pink)">Menu</span><h2>Dịch vụ của tụi mình</h2><p>Giá niêm yết rõ ràng, không phát sinh</p></div>
+  <div class="svc">
+    <div class="card" style="background:var(--pink)"><div class="ico"><div class="nail" style="background:#FF8FB4"></div></div><h3>Sơn gel</h3><p>Bóng đẹp, bền màu 3–4 tuần, kèm chăm sóc da.</p><div class="pr">150k <small>/ bộ</small></div></div>
+    <div class="card" style="background:var(--lilac)"><div class="ico"><div class="nail" style="background:#A88BF0"></div></div><h3>Úp móng</h3><p>Form nhọn, vuông, bầu, ballerina tuỳ ý.</p><div class="pr">250k <small>/ bộ</small></div></div>
+    <div class="card" style="background:var(--mint)"><div class="ico"><div class="nail" style="background:#6FCFA4"></div></div><h3>Nail art</h3><p>Vẽ hoạt hình, hoa lá, đính charm siêu cute.</p><div class="pr">20k <small>/ móng</small></div></div>
+    <div class="card" style="background:var(--peach)"><div class="ico"><div class="nail" style="background:#FFA47E"></div></div><h3>Spa chân</h3><p>Ngâm thảo mộc, tẩy da chết, massage thư giãn.</p><div class="pr">200k <small>/ lần</small></div></div>
+  </div>
+</div></section>
+
+<section id="bo-suu-tap" style="padding-top:0"><div class="wrap"><div class="gal-wrap">
+  <div class="head" style="margin-bottom:28px"><span class="chip">Lookbook</span><h2>Mẫu nail hot tuần này</h2></div>
+  <div class="filters"><span class="on">Tất cả</span><span>Pastel</span><span>Mắt mèo</span><span>Đính đá</span><span>Cô dâu</span></div>
+  <div class="gal">
+    <div class="g"><span class="heart">♥</span><div class="nail" style="background:#C9B6F6"></div><div class="nail" style="background:#FFB8CF;height:80px"></div><b>Candy Mix</b></div>
+    <div class="g"><span class="heart">♥</span><div class="nail" style="background:linear-gradient(160deg,#fff,#D3C4F9 60%,#fff)"></div><div class="nail" style="background:linear-gradient(160deg,#fff,#D3C4F9 60%,#fff);height:80px"></div><b>Mắt mèo tím</b></div>
+    <div class="g"><span class="heart">♥</span><div class="nail" style="background:#A8E3C8"></div><div class="nail" style="background:#FFF1C2;height:80px"></div><b>Mint Butter</b></div>
+    <div class="g"><span class="heart">♥</span><div class="nail" style="background:linear-gradient(180deg,#fff 0 30%,#FFD9E6 30%)"></div><div class="nail" style="background:linear-gradient(180deg,#fff 0 30%,#FFD9E6 30%);height:80px"></div><b>Pink French</b></div>
+  </div>
+</div></div></section>
+
+<section id="danh-gia" style="padding-top:0"><div class="wrap">
+  <div class="head"><span class="chip" style="background:var(--mint)">Review</span><h2>Khách iu nói gì nè</h2></div>
+  <div class="rv-grid">
+    <div class="rv"><div class="top"><div class="av" style="background:var(--pink)">NA</div><div><b>Ngọc Anh</b><div class="stars">★★★★★</div></div></div><p>Mẫu nào cũng xinh xỉu, các bạn thợ dễ thương nhiệt tình lắm. Sẽ quay lại!</p></div>
+    <div class="rv"><div class="top"><div class="av" style="background:var(--lilac)">TH</div><div><b>Thu Hà</b><div class="stars">★★★★★</div></div></div><p>Màu pastel ở đây nhiều cực, chọn mãi không xong. Móng giữ lâu, không bị bong.</p></div>
+    <div class="rv"><div class="top"><div class="av" style="background:var(--mint)">MC</div><div><b>Minh Châu</b><div class="stars">★★★★★</div></div></div><p>Đặt lịch online xong tới là làm luôn, không phải chờ. Tiệm sạch sẽ thơm tho.</p></div>
+  </div>
+</div></section>
+
+<section id="dat-lich" style="padding-top:0"><div class="wrap"><div class="book">
+  <div>
+    <span class="chip" style="background:#fff">Đặt lịch</span>
+    <h2>Giữ chỗ cho bạn liền nè!</h2>
+    <p>Điền form bên cạnh, tụi mình nhắn Zalo xác nhận trong 15 phút.</p>
+    <ul>
+      <li>📍 123 Đường Hoa Hồng, Quận 1, TP.HCM</li>
+      <li>📞 0900 000 000 (Zalo)</li>
+      <li>🕘 9:00 – 21:00 mỗi ngày</li>
+    </ul>
+  </div>
+  <form onsubmit="event.preventDefault();alert('Đây là bản demo')">
+    <div class="two"><input placeholder="Tên của bạn"><input placeholder="Số điện thoại"></div>
+    <div class="pills">
+      <label><input type="checkbox" checked><span>Sơn gel</span></label>
+      <label><input type="checkbox"><span>Úp móng</span></label>
+      <label><input type="checkbox"><span>Nail art</span></label>
+      <label><input type="checkbox"><span>Spa chân</span></label>
+    </div>
+    <div class="two"><input type="date"><input type="time"></div>
+    <button class="btn" style="border:0;cursor:pointer;font:inherit;font-weight:700;justify-content:center">Đặt lịch ngay ✿</button>
+  </form>
+</div></div></section>
+
+<footer><span class="logo">Rosé Nails</span>© 2026 · Facebook · Instagram · TikTok · Zalo</footer>
+<div class="demo-tag">Mẫu: <a href="demo-1-blush.html">1</a><a href="demo-2-minimal.html">2</a><a class="on" href="demo-3-pastel.html">3</a><a href="demo-4-fresh.html">4</a></div>
+</body>
+</html>

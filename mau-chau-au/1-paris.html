@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mẫu 1 · Paris Chic</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Montserrat:wght@300;400;500&family=Great+Vibes&display=swap&subset=vietnamese" rel="stylesheet">
+<style>
+:root{--bg:#FBF8F3;--paper:#F3EDE3;--ink:#1C1A17;--gold:#B08D57;--muted:#6E665C;--line:#E2D9CB;--blush:#EBD9D1}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:'Montserrat',sans-serif;font-weight:300;line-height:1.75;font-size:15px}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+.serif{font-family:'Playfair Display',serif;font-weight:400}
+.script{font-family:'Great Vibes',cursive;color:var(--gold);font-weight:400}
+.eyebrow{font-size:.7rem;letter-spacing:.32em;text-transform:uppercase;font-weight:500;color:var(--gold)}
+.btn{display:inline-block;padding:16px 38px;background:var(--ink);color:var(--bg);font-size:.72rem;letter-spacing:.26em;text-transform:uppercase;font-weight:500;border:1px solid var(--ink);transition:.3s;cursor:pointer;font-family:inherit}
+.btn:hover{background:transparent;color:var(--ink)}
+.btn.out{background:transparent;color:var(--ink)}
+.btn.out:hover{background:var(--ink);color:var(--bg)}
+.orn{display:flex;align-items:center;justify-content:center;gap:14px;color:var(--gold);margin:18px auto 0}
+.orn::before,.orn::after{content:"";width:60px;height:1px;background:var(--gold)}
+/* top + nav */
+.top{border-bottom:1px solid var(--line);font-size:.68rem;letter-spacing:.24em;text-transform:uppercase;text-align:center;padding:9px;color:var(--muted)}
+nav{border-bottom:1px solid var(--line);background:var(--bg);position:sticky;top:0;z-index:20}
+nav .wrap{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;height:96px}
+.links{display:flex;gap:34px;font-size:.7rem;letter-spacing:.24em;text-transform:uppercase;font-weight:500}
+.links a:hover{color:var(--gold)}
+.links.r{justify-content:flex-end}
+.logo{text-align:center;line-height:1}
+.logo .script{font-size:1.6rem;display:block;margin-bottom:-4px}
+.logo b{font-family:'Playfair Display',serif;font-weight:400;font-size:1.55rem;letter-spacing:.28em;text-transform:uppercase}
+/* hero */
+.hero{text-align:center;padding:80px 0 0}
+.hero h1{font-family:'Playfair Display',serif;font-weight:400;font-size:clamp(2.6rem,6vw,5rem);line-height:1.08;margin:20px auto 22px;max-width:900px}
+.hero h1 em{font-style:italic;color:var(--gold)}
+.hero p{max-width:560px;margin:0 auto 36px;color:var(--muted)}
+.hero .acts{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.arches{display:grid;grid-template-columns:1fr 1.25fr 1fr;gap:22px;align-items:end;margin-top:70px}
+.arch{border-radius:300px 300px 0 0;position:relative;display:flex;align-items:flex-end;justify-content:center;gap:12px;padding-bottom:60px;overflow:hidden}
+.arch::before{content:"";position:absolute;inset:12px 12px 0;border:1px solid rgba(255,255,255,.75);border-bottom:0;border-radius:300px 300px 0 0}
+.arch.a1{height:380px;background:linear-gradient(180deg,#EFE3D6,#E2CDBB)}
+.arch.a2{height:500px;background:linear-gradient(180deg,#F1DFD8,#E3C3B9)}
+.arch.a3{height:380px;background:linear-gradient(180deg,#ECE6DC,#D9CDBD)}
+.nail{width:44px;height:96px;border-radius:50% 50% 12px 12px/60% 60% 12px 12px;position:relative;box-shadow:inset -5px -8px 12px rgba(0,0,0,.08),0 12px 20px -10px rgba(0,0,0,.3)}
+.nail::after{content:"";position:absolute;top:12px;left:9px;width:7px;height:30px;border-radius:8px;background:rgba(255,255,255,.5)}
+/* sections */
+section{padding:120px 0}
+.head{text-align:center;margin-bottom:64px}
+.head h2{font-family:'Playfair Display',serif;font-weight:400;font-size:clamp(2.2rem,4.4vw,3.4rem);line-height:1.15;margin-top:12px}
+.head h2 em{color:var(--gold)}
+/* la carte */
+.carte{background:var(--paper)}
+.card{max-width:980px;margin:0 auto;background:var(--bg);padding:70px 64px;position:relative;outline:1px solid var(--line);outline-offset:-14px}
+.card::after{content:"";position:absolute;inset:20px;border:1px solid var(--line);pointer-events:none}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:20px 70px;position:relative;z-index:1}
+.cat{font-family:'Playfair Display',serif;font-style:italic;font-size:1.5rem;margin:6px 0 10px;color:var(--gold)}
+.it{display:flex;align-items:baseline;gap:10px;padding:9px 0}
+.it .n{font-weight:400}
+.it .n small{display:block;color:var(--muted);font-size:.78rem;font-weight:300}
+.it .d{flex:1;border-bottom:1px dotted #C9BBA6;transform:translateY(-5px)}
+.it .p{font-family:'Playfair Display',serif;font-size:1.05rem;white-space:nowrap}
+.card .note{text-align:center;margin-top:40px;font-size:.78rem;color:var(--muted);letter-spacing:.08em;position:relative;z-index:1}
+/* gallery */
+.filters{display:flex;justify-content:center;gap:30px;margin-bottom:46px;font-size:.7rem;letter-spacing:.24em;text-transform:uppercase;font-weight:500;flex-wrap:wrap}
+.filters span{padding-bottom:6px;border-bottom:1px solid transparent;cursor:pointer;color:var(--muted)}
+.filters span.on{color:var(--ink);border-color:var(--gold)}
+.gal{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.gi figure{aspect-ratio:3/4;border-radius:200px 200px 0 0;display:flex;align-items:flex-end;justify-content:center;gap:8px;padding-bottom:40px}
+.gi .nail{width:32px;height:70px}
+.gi figcaption{text-align:center;margin-top:14px;font-family:'Playfair Display',serif;font-style:italic;font-size:1.1rem}
+.gi figcaption small{display:block;font-family:'Montserrat';font-style:normal;font-size:.66rem;letter-spacing:.24em;text-transform:uppercase;color:var(--muted)}
+/* philosophy */
+.philo{border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.philo .wrap{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.philo h2{font-family:'Playfair Display',serif;font-weight:400;font-size:clamp(2.2rem,4vw,3.2rem);line-height:1.15;margin:14px 0 22px}
+.philo h2 em{color:var(--gold)}
+.philo p{color:var(--muted);margin-bottom:16px}
+.pts{display:grid;gap:0}
+.pt{display:grid;grid-template-columns:70px 1fr;padding:26px 0;border-bottom:1px solid var(--line)}
+.pt:first-child{border-top:1px solid var(--line)}
+.pt span{font-family:'Playfair Display',serif;font-style:italic;font-size:1.8rem;color:var(--gold);line-height:1}
+.pt b{font-family:'Playfair Display',serif;font-weight:500;font-size:1.15rem;display:block;margin-bottom:2px}
+.pt small{color:var(--muted);font-size:.88rem}
+/* quote */
+.quote{text-align:center}
+.quote blockquote{font-family:'Playfair Display',serif;font-style:italic;font-size:clamp(1.6rem,3.2vw,2.5rem);line-height:1.4;max-width:860px;margin:26px auto}
+.quote .who{font-size:.7rem;letter-spacing:.3em;text-transform:uppercase;font-weight:500}
+.stars{color:var(--gold);letter-spacing:6px}
+/* booking */
+.rdv{background:var(--blush)}
+.rdv .wrap{display:grid;grid-template-columns:1fr 1.1fr;gap:70px;align-items:center}
+.rdv h2{font-family:'Playfair Display',serif;font-weight:400;font-size:clamp(2.2rem,4vw,3.2rem);margin:14px 0 20px;line-height:1.1}
+.rdv dl{display:grid;grid-template-columns:120px 1fr;gap:14px;margin-top:30px;font-size:.92rem}
+.rdv dt{font-size:.66rem;letter-spacing:.24em;text-transform:uppercase;font-weight:500;padding-top:4px}
+form{background:var(--bg);padding:48px;display:grid;grid-template-columns:1fr 1fr;gap:4px 24px}
+form .full{grid-column:1/-1}
+label{font-size:.64rem;letter-spacing:.24em;text-transform:uppercase;font-weight:500;color:var(--muted);display:block;margin-top:16px}
+input,select{width:100%;min-width:0;border:0;border-bottom:1px solid var(--line);background:transparent;padding:10px 0;font:inherit;color:var(--ink);outline:none}
+input:focus,select:focus{border-color:var(--gold)}
+form .btn{margin-top:30px}
+footer{padding:70px 0 90px;text-align:center}
+footer .logo{margin-bottom:24px}
+footer .links{justify-content:center;flex-wrap:wrap;gap:24px;margin-bottom:20px}
+footer small{color:var(--muted);font-size:.74rem;letter-spacing:.1em}
+.demo-tag{position:fixed;left:16px;bottom:16px;z-index:50;background:var(--ink);color:#fff;font-size:.74rem;padding:8px 14px;border-radius:30px;display:flex;gap:10px;font-weight:400}
+.demo-tag a{opacity:.6}.demo-tag a.on,.demo-tag a:hover{opacity:1;text-decoration:underline}
+@media(max-width:900px){
+  nav .wrap{grid-template-columns:1fr;height:80px}
+  nav .links{display:none}
+  .arches{grid-template-columns:1fr 1fr;gap:12px}
+  .arch.a1,.arch.a3{height:260px}.arch.a2{height:320px;grid-column:1/-1;order:-1}
+  .card{padding:50px 26px}
+  .cols,.philo .wrap,.rdv .wrap{grid-template-columns:minmax(0,1fr);gap:40px}
+  .gal{grid-template-columns:1fr 1fr}
+  form{grid-template-columns:minmax(0,1fr);padding:30px 22px}
+  section{padding:80px 0}
+  .wrap{padding:0 18px}
+}
+</style>
+</head>
+<body>
+<div class="top">Nail atelier phong cách Paris · Quận 1, TP.HCM</div>
+<nav><div class="wrap">
+  <div class="links"><a href="#carte">Bảng giá</a><a href="#gallery">Bộ sưu tập</a></div>
+  <a class="logo" href="#"><span class="script">Maison</span><b>Nails Trendy</b></a>
+  <div class="links r"><a href="#about">Về chúng tôi</a><a href="#rdv">Đặt lịch</a></div>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <div class="eyebrow">Bienvenue · Chào mừng</div>
+  <h1>Vẻ đẹp tinh tế<br>trên từng <em>đầu ngón tay</em></h1>
+  <p>Lấy cảm hứng từ những salon nhỏ xinh bên bờ sông Seine — nơi sự chăm chút, thanh lịch và tinh tế được đặt lên hàng đầu.</p>
+  <div class="acts"><a class="btn" href="#rdv">Đặt lịch hẹn</a><a class="btn out" href="#carte">Xem bảng giá</a></div>
+  <div class="arches">
+    <div class="arch a1"><div class="nail" style="background:linear-gradient(180deg,#fff 0 30%,#F2E4DA 30%)"></div><div class="nail" style="background:linear-gradient(180deg,#fff 0 30%,#F2E4DA 30%);height:84px"></div></div>
+    <div class="arch a2"><div class="nail" style="background:#C98B7F;height:84px"></div><div class="nail" style="background:#B5706A;height:106px"></div><div class="nail" style="background:#8E3F45;height:116px"></div><div class="nail" style="background:#B5706A;height:100px"></div><div class="nail" style="background:#C98B7F;height:78px"></div></div>
+    <div class="arch a3"><div class="nail" style="background:#1C1A17"></div><div class="nail" style="background:#B08D57;height:84px"></div></div>
+  </div>
+</div></header>
+
+<section class="carte" id="carte"><div class="wrap">
+  <div class="head"><div class="eyebrow">La Carte des Soins</div><h2>Dịch vụ &amp; <em>Bảng giá</em></h2><div class="orn">✦</div></div>
+  <div class="card">
+    <div class="cols">
+      <div>
+        <div class="cat">Les Mains — Tay</div>
+        <div class="it"><span class="n">Sơn gel trơn<small>Cắt da, dũa form, bền 3–4 tuần</small></span><span class="d"></span><span class="p">150.000đ</span></div>
+        <div class="it"><span class="n">French cổ điển<small>Đầu móng trắng tinh tế</small></span><span class="d"></span><span class="p">200.000đ</span></div>
+        <div class="it"><span class="n">Úp móng + sơn gel</span><span class="d"></span><span class="p">250.000đ</span></div>
+        <div class="it"><span class="n">Đắp gel / bột</span><span class="d"></span><span class="p">350.000đ</span></div>
+        <div class="cat" style="margin-top:26px">L'Art — Nghệ thuật</div>
+        <div class="it"><span class="n">Vẽ tay tối giản</span><span class="d"></span><span class="p">20.000đ / móng</span></div>
+        <div class="it"><span class="n">Đính đá, ngọc trai</span><span class="d"></span><span class="p">từ 15.000đ</span></div>
+      </div>
+      <div>
+        <div class="cat">Les Pieds — Chân</div>
+        <div class="it"><span class="n">Sơn gel chân</span><span class="d"></span><span class="p">150.000đ</span></div>
+        <div class="it"><span class="n">Spa chân thảo mộc<small>Ngâm, tẩy da chết, massage 30'</small></span><span class="d"></span><span class="p">200.000đ</span></div>
+        <div class="it"><span class="n">Dưỡng paraffin</span><span class="d"></span><span class="p">120.000đ</span></div>
+        <div class="cat" style="margin-top:26px">Les Rituels — Combo</div>
+        <div class="it"><span class="n">Rituel Classique<small>Gel tay + gel chân</small></span><span class="d"></span><span class="p">270.000đ</span></div>
+        <div class="it"><span class="n">Rituel Détente<small>Gel tay + spa chân</small></span><span class="d"></span><span class="p">320.000đ</span></div>
+        <div class="it"><span class="n">Rituel de Mariée<small>Combo cô dâu trọn gói</small></span><span class="d"></span><span class="p">599.000đ</span></div>
+      </div>
+    </div>
+    <div class="note">Giá đã bao gồm chăm sóc da và dưỡng móng · Không phụ thu</div>
+  </div>
+</div></section>
+
+<section id="gallery"><div class="wrap">
+  <div class="head"><div class="eyebrow">La Collection</div><h2>Bộ sưu tập <em>mùa thu</em></h2><div class="orn">✦</div></div>
+  <div class="filters"><span class="on">Tất cả</span><span>French</span><span>Nude</span><span>Đỏ rượu vang</span><span>Cô dâu</span></div>
+  <div class="gal">
+    <div class="gi"><figure style="background:#F0E6DC"><div class="nail" style="background:linear-gradient(180deg,#fff 0 30%,#F2E4DA 30%)"></div><div class="nail" style="background:linear-gradient(180deg,#fff 0 30%,#F2E4DA 30%);height:80px"></div></figure><figcaption>Le French<small>Classique</small></figcaption></div>
+    <div class="gi"><figure style="background:#EBDDD3"><div class="nail" style="background:#D8B8A3"></div><div class="nail" style="background:#C9A189;height:80px"></div></figure><figcaption>Café au Lait<small>Nude</small></figcaption></div>
+    <div class="gi"><figure style="background:#EAD7D3"><div class="nail" style="background:#8E3F45"></div><div class="nail" style="background:#6E2A31;height:80px"></div></figure><figcaption>Bordeaux<small>Rượu vang</small></figcaption></div>
+    <div class="gi"><figure style="background:#F2ECE4"><div class="nail" style="background:radial-gradient(circle at 50% 28%,#fff 0 4px,transparent 5px),linear-gradient(180deg,#FFFDF8,#F1E6DA)"></div><div class="nail" style="background:radial-gradient(circle at 50% 28%,#fff 0 4px,transparent 5px),linear-gradient(180deg,#FFFDF8,#F1E6DA);height:80px"></div></figure><figcaption>Perle<small>Cô dâu</small></figcaption></div>
+  </div>
+</div></section>
+
+<section class="philo" id="about"><div class="wrap">
+  <div>
+    <div class="eyebrow">Notre Philosophie</div>
+    <h2>Đẹp một cách <em>nhẹ nhàng</em>, không phô trương</h2>
+    <p>Tại Nails Trendy, chúng tôi tin rằng sự thanh lịch đến từ những điều giản dị: một bộ móng sạch sẽ, gọn gàng và màu sắc hài hoà với chính bạn.</p>
+    <p>Mỗi buổi hẹn là một khoảng thời gian thư thái — một tách trà, một bản nhạc jazz nhẹ và đôi bàn tay được chăm sóc tận tình.</p>
+  </div>
+  <div class="pts">
+    <div class="pt"><span>i.</span><div><b>Vệ sinh chuẩn châu Âu</b><small>Dụng cụ tiệt trùng, dũa dùng một lần cho mỗi khách.</small></div></div>
+    <div class="pt"><span>ii.</span><div><b>Sản phẩm cao cấp</b><small>Sơn chính hãng, an toàn, không mùi hắc.</small></div></div>
+    <div class="pt"><span>iii.</span><div><b>Tay nghề tỉ mỉ</b><small>Thợ được đào tạo bài bản, chú trọng từng chi tiết.</small></div></div>
+    <div class="pt"><span>iv.</span><div><b>Bảo hành 7 ngày</b><small>Sửa miễn phí nếu bong tróc.</small></div></div>
+  </div>
+</div></section>
+
+<section class="quote"><div class="wrap">
+  <div class="stars">★★★★★</div>
+  <blockquote>« Không gian như một tiệm nhỏ ở Paris. Mọi thứ đều tinh tế, từ ly trà đến từng nét sơn. »</blockquote>
+  <div class="who">Ngọc Anh — Khách quen</div>
+</div></section>
+
+<section class="rdv" id="rdv"><div class="wrap">
+  <div>
+    <div class="eyebrow">Prendre Rendez-vous</div>
+    <h2>Đặt lịch hẹn</h2>
+    <p style="color:var(--muted)">Chúng tôi sẽ liên hệ xác nhận trong vòng 15 phút.</p>
+    <dl>
+      <dt>Địa chỉ</dt><dd>123 Đường Hoa Hồng, Quận 1, TP.HCM</dd>
+      <dt>Điện thoại</dt><dd>0900 000 000</dd>
+      <dt>Giờ mở cửa</dt><dd>9:00 – 21:00, mỗi ngày</dd>
+    </dl>
+  </div>
+  <form onsubmit="event.preventDefault();alert('Đây là bản demo')">
+    <div><label>Họ tên</label><input></div>
+    <div><label>Điện thoại</label><input type="tel"></div>
+    <div class="full"><label>Dịch vụ</label><select><option>Sơn gel trơn</option><option>French cổ điển</option><option>Úp móng + sơn gel</option><option>Rituel Détente</option></select></div>
+    <div><label>Ngày</label><input type="date"></div>
+    <div><label>Giờ</label><input type="time"></div>
+    <div class="full"><button class="btn">Xác nhận đặt lịch</button></div>
+  </form>
+</div></section>
+
+<footer><div class="wrap">
+  <div class="logo"><span class="script">Maison</span><b>Nails Trendy</b></div>
+  <div class="links"><a href="#">Facebook</a><a href="#">Instagram</a><a href="#">TikTok</a><a href="#">Zalo</a></div>
+  <small>© 2026 Nails Trendy · Fait avec amour</small>
+</div></footer>
+<div class="demo-tag">Mẫu: <a class="on" href="1-paris.html">1 Paris</a><a href="2-nordic.html">2 Nordic</a><a href="3-milano.html">3 Milano</a></div>
+</body>
+</html>
