@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mẫu bảng giá 2 · Tab + ảnh</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Montserrat:wght@300;400;500&family=Great+Vibes&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<style>
+.pl{background:var(--paper);padding:110px 0}
+.pl-box{display:grid;grid-template-columns:.85fr 1.15fr;gap:56px;align-items:start;max-width:1100px;margin:0 auto}
+.pl-photo{position:sticky;top:110px;aspect-ratio:3/4;border-radius:260px 260px 0 0;overflow:hidden;background:var(--blush)}
+.pl-photo img{width:100%;height:100%;object-fit:cover}
+.pl-photo::after{content:"";position:absolute;inset:14px 14px 0;border:1px solid rgba(255,255,255,.7);border-bottom:0;border-radius:250px 250px 0 0}
+.pl-badge{position:absolute;left:50%;bottom:28px;transform:translateX(-50%);background:var(--ivory);padding:14px 26px;text-align:center;box-shadow:0 16px 30px -18px rgba(28,26,23,.5);z-index:1;white-space:nowrap}
+.pl-badge small{display:block;font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
+.pl-badge b{font-family:'Playfair Display',serif;font-weight:400;font-size:2rem;color:var(--gold-d);line-height:1.1}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:26px}
+.tabs button{background:transparent;border:1px solid var(--line);padding:11px 18px;border-radius:999px;font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;font-weight:500;color:var(--muted);transition:.2s}
+.tabs button:hover{border-color:var(--gold);color:var(--ink)}
+.tabs button.on{background:var(--ink);border-color:var(--ink);color:var(--bg)}
+.panel{display:none;animation:fade .35s ease}
+.panel.on{display:block}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}}
+.panel h3{font-family:'Playfair Display',serif;font-weight:400;font-size:2rem;margin-bottom:4px}
+.panel > p{color:var(--muted);font-size:.9rem;margin-bottom:18px}
+.item{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:16px 20px;background:var(--ivory);border:1px solid var(--line);margin-bottom:8px;transition:border-color .2s}
+.item:hover{border-color:var(--gold)}
+.item .n{font-size:.95rem}
+.item .n small{display:block;font-size:.76rem;color:var(--muted)}
+.item .p{font-family:'Playfair Display',serif;font-size:1.25rem;color:var(--gold-d);white-space:nowrap}
+.item.star{border-color:var(--gold);background:linear-gradient(90deg,#FFFBF3,var(--ivory))}
+.item.star .n::after{content:"★ Más pedido";display:inline-block;margin-left:10px;font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;color:var(--wine);vertical-align:2px}
+.pl-note{margin-top:22px;font-size:.82rem;color:var(--muted)}
+.pl-note a{color:var(--ink);border-bottom:1px solid var(--gold)}
+@media(max-width:860px){
+  .pl{padding:80px 0}
+  .pl-box{grid-template-columns:minmax(0,1fr);gap:30px}
+  .pl-box > div{min-width:0}
+  .pl-photo{position:relative;top:0;max-width:300px;margin:0 auto;width:100%}
+  .tabs{flex-wrap:nowrap;overflow-x:auto;padding-bottom:6px;margin-left:-18px;margin-right:-18px;padding-left:18px;padding-right:18px}
+  .tabs button{flex-shrink:0}
+}
+.demo-tag{position:fixed;left:16px;bottom:16px;z-index:80;background:var(--ink);color:#fff;font-size:.74rem;padding:8px 14px;border-radius:30px;display:flex;gap:12px}
+.demo-tag a{opacity:.6}.demo-tag a.on,.demo-tag a:hover{opacity:1;text-decoration:underline}
+</style>
+</head>
+<body>
+<section class="pl"><div class="wrap">
+  <div class="head"><div class="eyebrow">Nuestros servicios</div><h2>Lista de <em>precios</em></h2><div class="orn">✦</div></div>
+  <div class="pl-box">
+    <div class="pl-photo"><img src="../images/hero-3.jpg" alt="" style="object-position:50% 45%"><div class="pl-badge"><small>Manicura desde</small><b>10€</b></div></div>
+    <div>
+      <div class="tabs" role="tablist">
+        <button class="on" data-t="gel" role="tab">Gel &amp; Acrílicas</button>
+        <button data-t="semi" role="tab">Semipermanente</button>
+        <button data-t="mani" role="tab">Manicura</button>
+        <button data-t="pedi" role="tab">Pedicura</button>
+      </div>
+
+      <div class="panel on" id="gel">
+        <h3>Uñas de Gel &amp; Acrílicas</h3><p>Uñas resistentes y naturales, con el largo y la forma que prefieras.</p>
+        <div class="item star"><span class="n">Uñas de gel o acrílicas</span><span class="p">25€</span></div>
+        <div class="item"><span class="n">Relleno o retoque</span><span class="p">20€</span></div>
+        <div class="item"><span class="n">Retirar y poner nuevas</span><span class="p">30€</span></div>
+        <div class="item"><span class="n">Uñas de difuminado</span><span class="p">30€</span></div>
+        <div class="item"><span class="n">Uñas Baby Boomer</span><span class="p">30€</span></div>
+        <div class="item"><span class="n">Uñas más largas<small>Suplemento según el largo</small></span><span class="p">3 – 15€</span></div>
+        <div class="item"><span class="n">Quitar uñas acrílicas</span><span class="p">7€</span></div>
+        <div class="item"><span class="n">Dibujo</span><span class="p">2€</span></div>
+      </div>
+
+      <div class="panel" id="semi">
+        <h3>Semipermanente</h3><p>Color brillante que dura semanas, sin descascarillarse.</p>
+        <div class="item star"><span class="n">Semipermanente</span><span class="p">15€</span></div>
+        <div class="item"><span class="n">Solo cambiar color</span><span class="p">15€</span></div>
+        <div class="item"><span class="n">Quitar y pintar nuevas</span><span class="p">15€</span></div>
+        <div class="item"><span class="n">Quitar acrílicas y pintar semipermanente</span><span class="p">20€</span></div>
+        <div class="item"><span class="n">Quitar semipermanente</span><span class="p">5€</span></div>
+      </div>
+
+      <div class="panel" id="mani">
+        <h3>Manicura</h3><p>Manos cuidadas, cutículas perfectas y el color que quieras.</p>
+        <div class="item"><span class="n">Manicura completa</span><span class="p">10€</span></div>
+        <div class="item"><span class="n">Solo pintar color normal</span><span class="p">10€</span></div>
+        <div class="item"><span class="n">Manicura con esmalte normal</span><span class="p">13€</span></div>
+        <div class="item star"><span class="n">Manicura con semipermanente</span><span class="p">17€</span></div>
+      </div>
+
+      <div class="panel" id="pedi">
+        <h3>Pedicura</h3><p>Pies suaves y uñas impecables, con esmalte normal o semipermanente.</p>
+        <div class="item"><span class="n">Solo cortar, limar y pintar</span><span class="p">15€</span></div>
+        <div class="item"><span class="n">Pintar esmalte normal</span><span class="p">13€</span></div>
+        <div class="item star"><span class="n">Pedicura completa</span><span class="p">23€</span></div>
+        <div class="item"><span class="n">Pedicura con color normal</span><span class="p">25€</span></div>
+        <div class="item"><span class="n">Pedicura con semipermanente</span><span class="p">28€</span></div>
+        <div class="item"><span class="n">Uñas acrílicas</span><span class="p">30€</span></div>
+        <div class="item"><span class="n">Relleno uñas acrílicas</span><span class="p">25€</span></div>
+        <div class="item"><span class="n">Una uña acrílica</span><span class="p">3€</span></div>
+      </div>
+
+      <p class="pl-note">Sin cita previa · Para cualquier consulta, llámanos al <a href="tel:+34631339475">+34 631 339 475</a> o escríbenos por <a href="https://wa.me/34631339475">WhatsApp</a></p>
+    </div>
+  </div>
+</div></section>
+<div class="demo-tag">Mẫu bảng giá: <a href="1-tarjetas.html">1 Thẻ</a><a class="on" href="2-pestanas.html">2 Tab</a><a href="3-destacados.html">3 Nổi bật</a><a href="../index.html#precios">Bản hiện tại</a></div>
+<script>
+document.querySelector('.tabs').addEventListener('click', e => {
+  const b = e.target.closest('button'); if (!b) return;
+  document.querySelectorAll('.tabs button').forEach(x => x.classList.toggle('on', x === b));
+  document.querySelectorAll('.panel').forEach(p => p.classList.toggle('on', p.id === b.dataset.t));
+});
+</script>
+</body>
+</html>

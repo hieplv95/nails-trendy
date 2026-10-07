@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mẫu bảng giá 1 · Thẻ theo nhóm</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Montserrat:wght@300;400;500&family=Great+Vibes&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<style>
+.pl{background:var(--paper);padding:110px 0}
+.pl-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px;max-width:1080px;margin:0 auto}
+.pc{background:var(--ivory);border:1px solid var(--line);padding:34px 36px 26px;position:relative;transition:transform .3s,box-shadow .3s}
+.pc:hover{transform:translateY(-4px);box-shadow:0 30px 50px -36px rgba(28,26,23,.45)}
+.pc-head{display:flex;align-items:center;gap:16px;padding-bottom:18px;margin-bottom:8px;border-bottom:1px solid var(--line)}
+.pc-ico{width:54px;height:54px;border-radius:50%;background:var(--paper);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.pc-ico svg{width:26px;height:26px;fill:none;stroke:var(--gold-d);stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
+.pc-head h3{font-family:'Playfair Display',serif;font-weight:400;font-size:1.45rem;line-height:1.2}
+.pc-head small{display:block;font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-top:2px}
+.pc-from{margin-left:auto;text-align:right;font-size:.64rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.pc-from b{display:block;font-family:'Playfair Display',serif;font-weight:400;font-size:1.6rem;letter-spacing:0;text-transform:none;color:var(--gold-d);line-height:1.1}
+.row{display:flex;align-items:baseline;gap:10px;padding:11px 0;border-bottom:1px dashed #E6DDD0}
+.row:last-child{border-bottom:0}
+.row .n{font-size:.92rem}
+.row .n small{display:block;font-size:.76rem;color:var(--muted)}
+.row .d{flex:1}
+.row .p{font-family:'Playfair Display',serif;font-size:1.08rem;white-space:nowrap}
+.tag{font-size:.56rem;letter-spacing:.14em;text-transform:uppercase;font-weight:500;background:var(--wine);color:#fff;padding:3px 8px;border-radius:999px;margin-left:8px;vertical-align:2px}
+.pl-note{text-align:center;margin-top:40px;font-size:.82rem;color:var(--muted)}
+.pl-note a{color:var(--ink);border-bottom:1px solid var(--gold)}
+@media(max-width:860px){.pl-grid{grid-template-columns:minmax(0,1fr)}.pc-head h3{font-size:1.2rem}.pc{padding:28px 22px 20px}.pl{padding:80px 0}}
+.demo-tag{position:fixed;left:16px;bottom:16px;z-index:80;background:var(--ink);color:#fff;font-size:.74rem;padding:8px 14px;border-radius:30px;display:flex;gap:12px}
+.demo-tag a{opacity:.6}.demo-tag a.on,.demo-tag a:hover{opacity:1;text-decoration:underline}
+</style>
+</head>
+<body>
+<section class="pl"><div class="wrap">
+  <div class="head"><div class="eyebrow">Nuestros servicios</div><h2>Lista de <em>precios</em></h2><div class="orn">✦</div></div>
+  <div class="pl-grid">
+
+    <article class="pc">
+      <div class="pc-head">
+        <span class="pc-ico"><svg viewBox="0 0 24 24"><path d="M8 10c0-5 8-5 8 0v9a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2z"/><path d="M10.5 7.5v4"/></svg></span>
+        <div><h3>Uñas de Gel &amp; Acrílicas</h3><small>8 servicios</small></div>
+        <div class="pc-from">desde<b>2€</b></div>
+      </div>
+      <div class="row"><span class="n">Uñas de gel o acrílicas<span class="tag">Más pedido</span></span><span class="d"></span><span class="p">25€</span></div>
+      <div class="row"><span class="n">Relleno o retoque</span><span class="d"></span><span class="p">20€</span></div>
+      <div class="row"><span class="n">Retirar y poner nuevas</span><span class="d"></span><span class="p">30€</span></div>
+      <div class="row"><span class="n">Uñas de difuminado</span><span class="d"></span><span class="p">30€</span></div>
+      <div class="row"><span class="n">Uñas Baby Boomer</span><span class="d"></span><span class="p">30€</span></div>
+      <div class="row"><span class="n">Uñas más largas<small>Suplemento según el largo</small></span><span class="d"></span><span class="p">3 – 15€</span></div>
+      <div class="row"><span class="n">Quitar uñas acrílicas</span><span class="d"></span><span class="p">7€</span></div>
+      <div class="row"><span class="n">Dibujo</span><span class="d"></span><span class="p">2€</span></div>
+    </article>
+
+    <article class="pc">
+      <div class="pc-head">
+        <span class="pc-ico"><svg viewBox="0 0 24 24"><rect x="7" y="10" width="10" height="11" rx="2"/><path d="M10 10V6h4v4M11 6V3h2v3"/></svg></span>
+        <div><h3>Semipermanente</h3><small>5 servicios</small></div>
+        <div class="pc-from">desde<b>5€</b></div>
+      </div>
+      <div class="row"><span class="n">Semipermanente</span><span class="d"></span><span class="p">15€</span></div>
+      <div class="row"><span class="n">Solo cambiar color</span><span class="d"></span><span class="p">15€</span></div>
+      <div class="row"><span class="n">Quitar y pintar nuevas</span><span class="d"></span><span class="p">15€</span></div>
+      <div class="row"><span class="n">Quitar acrílicas y pintar semipermanente</span><span class="d"></span><span class="p">20€</span></div>
+      <div class="row"><span class="n">Quitar semipermanente</span><span class="d"></span><span class="p">5€</span></div>
+    </article>
+
+    <article class="pc">
+      <div class="pc-head">
+        <span class="pc-ico"><svg viewBox="0 0 24 24"><path d="M7 21v-6l-2-3V7a1.5 1.5 0 0 1 3 0v4M8 7V4.5a1.5 1.5 0 0 1 3 0V11M11 5a1.5 1.5 0 0 1 3 0v6M14 6.5a1.5 1.5 0 0 1 3 0V15c0 3-2 6-5 6"/></svg></span>
+        <div><h3>Manicura</h3><small>4 servicios</small></div>
+        <div class="pc-from">desde<b>10€</b></div>
+      </div>
+      <div class="row"><span class="n">Manicura completa</span><span class="d"></span><span class="p">10€</span></div>
+      <div class="row"><span class="n">Solo pintar color normal</span><span class="d"></span><span class="p">10€</span></div>
+      <div class="row"><span class="n">Manicura con esmalte normal</span><span class="d"></span><span class="p">13€</span></div>
+      <div class="row"><span class="n">Manicura con semipermanente</span><span class="d"></span><span class="p">17€</span></div>
+    </article>
+
+    <article class="pc">
+      <div class="pc-head">
+        <span class="pc-ico"><svg viewBox="0 0 24 24"><path d="M9 21c-3 0-4-2-4-5 0-4 2-6 2-9a2.5 2.5 0 0 1 5 0c0 2-1 3-1 5 0 3 3 3 3 6 0 2-2 3-5 3z"/><circle cx="15" cy="4" r="1.2"/><circle cx="17.5" cy="6" r="1"/><circle cx="18.5" cy="9" r=".9"/></svg></span>
+        <div><h3>Pedicura</h3><small>8 servicios</small></div>
+        <div class="pc-from">desde<b>3€</b></div>
+      </div>
+      <div class="row"><span class="n">Solo cortar, limar y pintar</span><span class="d"></span><span class="p">15€</span></div>
+      <div class="row"><span class="n">Pintar esmalte normal</span><span class="d"></span><span class="p">13€</span></div>
+      <div class="row"><span class="n">Pedicura completa<span class="tag">Más pedido</span></span><span class="d"></span><span class="p">23€</span></div>
+      <div class="row"><span class="n">Pedicura con color normal</span><span class="d"></span><span class="p">25€</span></div>
+      <div class="row"><span class="n">Pedicura con semipermanente</span><span class="d"></span><span class="p">28€</span></div>
+      <div class="row"><span class="n">Uñas acrílicas</span><span class="d"></span><span class="p">30€</span></div>
+      <div class="row"><span class="n">Relleno uñas acrílicas</span><span class="d"></span><span class="p">25€</span></div>
+      <div class="row"><span class="n">Una uña acrílica</span><span class="d"></span><span class="p">3€</span></div>
+    </article>
+
+  </div>
+  <p class="pl-note">Sin cita previa · Para cualquier consulta, llámanos al <a href="tel:+34631339475">+34 631 339 475</a> o escríbenos por <a href="https://wa.me/34631339475">WhatsApp</a></p>
+</div></section>
+<div class="demo-tag">Mẫu bảng giá: <a class="on" href="1-tarjetas.html">1 Thẻ</a><a href="2-pestanas.html">2 Tab</a><a href="3-destacados.html">3 Nổi bật</a><a href="../index.html#precios">Bản hiện tại</a></div>
+</body>
+</html>

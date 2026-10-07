@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mẫu bảng giá 3 · Nổi bật + danh sách</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Montserrat:wght@300;400;500&family=Great+Vibes&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<style>
+.pl{background:var(--paper);padding:110px 0}
+/* 3 dịch vụ nổi bật */
+.feat{display:grid;grid-template-columns:1fr 1.12fr 1fr;gap:18px;align-items:center;max-width:1000px;margin:0 auto 70px}
+.ft{background:var(--ivory);border:1px solid var(--line);text-align:center;padding:38px 26px 34px;position:relative}
+.ft .lbl{font-size:.64rem;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
+.ft .price{font-family:'Playfair Display',serif;font-size:3.4rem;line-height:1;margin:16px 0 10px;color:var(--ink)}
+.ft .price sup{font-size:1.3rem;vertical-align:1.6em;margin-left:2px}
+.ft h3{font-family:'Playfair Display',serif;font-weight:400;font-size:1.25rem;margin-bottom:8px}
+.ft p{font-size:.84rem;color:var(--muted);line-height:1.6}
+.ft.main{background:var(--ink);border-color:var(--ink);padding:52px 30px 46px;color:var(--bg)}
+.ft.main .lbl,.ft.main p{color:#BDB3A6}
+.ft.main .price{color:#E3CFA6;font-size:4.2rem}
+.ft.main .ribbon{position:absolute;top:0;left:50%;transform:translate(-50%,-50%);background:var(--gold);color:#fff;font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;padding:6px 14px;font-weight:500;white-space:nowrap}
+/* danh sách đầy đủ */
+.full{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:10px 64px}
+.grp{margin-bottom:26px}
+.grp h4{display:flex;align-items:center;gap:14px;font-family:'Playfair Display',serif;font-weight:400;font-style:italic;font-size:1.35rem;color:var(--gold-d);margin-bottom:6px}
+.grp h4::after{content:"";flex:1;height:1px;background:var(--line)}
+.li{display:flex;align-items:baseline;gap:10px;padding:9px 12px;margin:0 -12px;transition:background .2s}
+.li:hover{background:rgba(255,253,249,.8)}
+.li .n{font-size:.9rem}
+.li .n small{display:block;font-size:.74rem;color:var(--muted)}
+.li .d{flex:1;border-bottom:1px dotted #C9BBA6;transform:translateY(-4px);min-width:16px}
+.li .p{font-family:'Playfair Display',serif;font-size:1.02rem;white-space:nowrap}
+.pl-note{text-align:center;margin-top:30px;font-size:.82rem;color:var(--muted)}
+.pl-note a{color:var(--ink);border-bottom:1px solid var(--gold)}
+@media(max-width:860px){
+  .pl{padding:80px 0}
+  .feat{grid-template-columns:1fr;max-width:380px;gap:26px}
+  .ft.main{order:-1}
+  .full{grid-template-columns:1fr}
+}
+.demo-tag{position:fixed;left:16px;bottom:16px;z-index:80;background:var(--ink);color:#fff;font-size:.74rem;padding:8px 14px;border-radius:30px;display:flex;gap:12px}
+.demo-tag a{opacity:.6}.demo-tag a.on,.demo-tag a:hover{opacity:1;text-decoration:underline}
+</style>
+</head>
+<body>
+<section class="pl"><div class="wrap">
+  <div class="head"><div class="eyebrow">Nuestros servicios</div><h2>Lista de <em>precios</em></h2><div class="orn">✦</div></div>
+
+  <div class="feat">
+    <div class="ft"><div class="lbl">Manicura</div><div class="price">10<sup>€</sup></div><h3>Manicura completa</h3><p>Limado, cutículas e hidratación.</p></div>
+    <div class="ft main"><span class="ribbon">Más pedido</span><div class="lbl">Uñas de gel o acrílicas</div><div class="price">25<sup>€</sup></div><h3>Uñas nuevas</h3><p>Uñas resistentes y naturales,<br>con la forma que prefieras.</p></div>
+    <div class="ft"><div class="lbl">Pedicura</div><div class="price">23<sup>€</sup></div><h3>Pedicura completa</h3><p>Pies suaves y uñas impecables.</p></div>
+  </div>
+
+  <div class="full">
+    <div>
+      <div class="grp"><h4>Uñas de Gel &amp; Acrílicas</h4>
+        <div class="li"><span class="n">Uñas de gel o acrílicas</span><span class="d"></span><span class="p">25€</span></div>
+        <div class="li"><span class="n">Relleno o retoque</span><span class="d"></span><span class="p">20€</span></div>
+        <div class="li"><span class="n">Retirar y poner nuevas</span><span class="d"></span><span class="p">30€</span></div>
+        <div class="li"><span class="n">Uñas de difuminado</span><span class="d"></span><span class="p">30€</span></div>
+        <div class="li"><span class="n">Uñas Baby Boomer</span><span class="d"></span><span class="p">30€</span></div>
+        <div class="li"><span class="n">Uñas más largas<small>Suplemento según el largo</small></span><span class="d"></span><span class="p">3 – 15€</span></div>
+        <div class="li"><span class="n">Quitar uñas acrílicas</span><span class="d"></span><span class="p">7€</span></div>
+        <div class="li"><span class="n">Dibujo</span><span class="d"></span><span class="p">2€</span></div>
+      </div>
+      <div class="grp"><h4>Semipermanente</h4>
+        <div class="li"><span class="n">Semipermanente</span><span class="d"></span><span class="p">15€</span></div>
+        <div class="li"><span class="n">Solo cambiar color</span><span class="d"></span><span class="p">15€</span></div>
+        <div class="li"><span class="n">Quitar y pintar nuevas</span><span class="d"></span><span class="p">15€</span></div>
+        <div class="li"><span class="n">Quitar acrílicas y pintar semipermanente</span><span class="d"></span><span class="p">20€</span></div>
+        <div class="li"><span class="n">Quitar semipermanente</span><span class="d"></span><span class="p">5€</span></div>
+      </div>
+    </div>
+    <div>
+      <div class="grp"><h4>Manicura</h4>
+        <div class="li"><span class="n">Manicura completa</span><span class="d"></span><span class="p">10€</span></div>
+        <div class="li"><span class="n">Solo pintar color normal</span><span class="d"></span><span class="p">10€</span></div>
+        <div class="li"><span class="n">Manicura con esmalte normal</span><span class="d"></span><span class="p">13€</span></div>
+        <div class="li"><span class="n">Manicura con semipermanente</span><span class="d"></span><span class="p">17€</span></div>
+      </div>
+      <div class="grp"><h4>Pedicura</h4>
+        <div class="li"><span class="n">Solo cortar, limar y pintar</span><span class="d"></span><span class="p">15€</span></div>
+        <div class="li"><span class="n">Pintar esmalte normal</span><span class="d"></span><span class="p">13€</span></div>
+        <div class="li"><span class="n">Pedicura completa</span><span class="d"></span><span class="p">23€</span></div>
+        <div class="li"><span class="n">Pedicura con color normal</span><span class="d"></span><span class="p">25€</span></div>
+        <div class="li"><span class="n">Pedicura con semipermanente</span><span class="d"></span><span class="p">28€</span></div>
+        <div class="li"><span class="n">Uñas acrílicas</span><span class="d"></span><span class="p">30€</span></div>
+        <div class="li"><span class="n">Relleno uñas acrílicas</span><span class="d"></span><span class="p">25€</span></div>
+        <div class="li"><span class="n">Una uña acrílica</span><span class="d"></span><span class="p">3€</span></div>
+      </div>
+    </div>
+  </div>
+  <p class="pl-note">Sin cita previa · Para cualquier consulta, llámanos al <a href="tel:+34631339475">+34 631 339 475</a> o escríbenos por <a href="https://wa.me/34631339475">WhatsApp</a></p>
+</div></section>
+<div class="demo-tag">Mẫu bảng giá: <a href="1-tarjetas.html">1 Thẻ</a><a href="2-pestanas.html">2 Tab</a><a class="on" href="3-destacados.html">3 Nổi bật</a><a href="../index.html#precios">Bản hiện tại</a></div>
+</body>
+</html>
