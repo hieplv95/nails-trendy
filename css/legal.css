@@ -1,0 +1,28 @@
+/* Trang chính sách — dùng chung màu và font với style.css */
+.legal-top{border-bottom:1px solid var(--line);background:var(--bg)}
+.legal-top .wrap{display:flex;align-items:center;justify-content:space-between;height:84px}
+.legal-top .back{font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;font-weight:500;color:var(--muted)}
+.legal-top .back:hover{color:var(--ink)}
+.legal{max-width:780px;margin:0 auto;padding:70px 24px 90px}
+.legal h1{font-family:'Playfair Display',serif;font-weight:400;font-size:clamp(2rem,4.4vw,2.8rem);line-height:1.15;margin:10px 0 6px}
+.legal .upd{color:var(--muted);font-size:.85rem;margin-bottom:40px}
+.legal h2{font-family:'Playfair Display',serif;font-weight:500;font-size:1.3rem;margin:38px 0 12px}
+.legal p,.legal li{color:#4A443D;font-size:.95rem;line-height:1.8}
+.legal p + p{margin-top:12px}
+.legal ul{padding-left:20px;margin:10px 0}
+.legal li{margin:4px 0}
+.legal a{color:var(--wine);border-bottom:1px solid rgba(142,63,69,.3)}
+.legal a:hover{border-color:var(--wine)}
+.legal .card{background:var(--ivory);border:1px solid var(--line);padding:22px 26px;margin:14px 0}
+.legal .card dl{display:grid;grid-template-columns:160px 1fr;gap:8px 14px;font-size:.93rem}
+.legal .card dt{color:var(--muted)}
+.legal table{width:100%;border-collapse:collapse;font-size:.88rem;margin:14px 0}
+.legal th,.legal td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top}
+.legal th{background:var(--paper);font-weight:500}
+.legal .others{margin-top:60px;padding-top:24px;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;gap:10px 22px;font-size:.85rem}
+.legal button.linkbtn{background:none;border:0;padding:0;font:inherit;color:var(--wine);border-bottom:1px solid rgba(142,63,69,.3);cursor:pointer}
+@media(max-width:600px){
+  .legal .card dl{grid-template-columns:1fr;gap:2px}
+  .legal .card dd{margin-bottom:8px}
+  .legal{padding-top:44px}
+}
