@@ -64,6 +64,7 @@
     fillShop();
     renderHours();
     renderReviews();
+    igDates();
   }
 
   /* ---------- Nút chọn ngôn ngữ ---------- */
@@ -174,7 +175,7 @@
     french: /french|francesa/,
     nude: /nude|natural|baby ?boomer|difuminad/,
     wine: /burdeos|bordeaux|granate|vino|rojo|red/,
-    art: /nail ?art|dibujo|diseñ|decorad|3d|piedra|strass|cristal/,
+    art: /nail ?art|dibujo|decorad|3d|piedra|strass|cristal/,
     bride: /novia|boda|bride|wedding/
   };
   async function loadInstagram() {
@@ -185,28 +186,41 @@
       const data = await res.json();
       const posts = (Array.isArray(data) ? data : data.posts || []).slice(0, S.instagramCount || 8);
       if (!posts.length) return;
-      $('#gal').innerHTML = posts.map((p, i) => {
+      // Tên dưới ảnh là ngày đăng (caption của tiệm hay trùng nhau); mẫu ♥ lưu theo link bài
+      $('#gal').innerHTML = posts.map(p => {
         const text = (p.prunedCaption || p.caption || '').replace(/\s+/g, ' ').trim();
-        const title = text ? (text.length > 28 ? text.slice(0, 26).trim() + '…' : text) : `${t('ig.design')} #${i + 1}`;
         const hay = (text + ' ' + (p.hashtags || []).join(' ')).toLowerCase();
         const cats = Object.keys(CATS).filter(k => CATS[k].test(hay)).join(' ');
         const img = (p.sizes && p.sizes.medium && p.sizes.medium.mediaUrl) ||
           (p.mediaType === 'VIDEO' ? p.thumbnailUrl : p.mediaUrl);
-        return `<div class="g" data-cat="${cats}" data-name="${esc(title + ' – ' + p.permalink)}">` +
+        const video = p.mediaType === 'VIDEO' ? '<span class="play" aria-hidden="true">▶</span>' : '';
+        return `<div class="g ig" data-cat="${cats}" data-name="${esc(p.permalink)}">` +
           `<button class="heart" data-i18n-aria="aria.save" aria-label="${esc(t('aria.save'))}">♥</button>` +
-          `<figure><a href="${esc(p.permalink)}" target="_blank" rel="noopener"><img src="${esc(img)}" alt="${esc(text || 'Nails Trendy')}" loading="lazy"></a></figure>` +
-          `<figcaption><b>${esc(title)}</b><small><a href="${esc(p.permalink)}" target="_blank" rel="noopener" data-i18n="ig.view">${esc(t('ig.view'))}</a></small></figcaption></div>`;
+          `<figure><a href="${esc(p.permalink)}" target="_blank" rel="noopener"><img src="${esc(img)}" alt="${esc(text.slice(0, 120) || 'Nails Trendy')}" loading="lazy">${video}</a></figure>` +
+          `<figcaption><b data-date="${esc(p.timestamp || '')}"></b><small><a href="${esc(p.permalink)}" target="_blank" rel="noopener" data-i18n="ig.view">${esc(t('ig.view'))}</a></small></figcaption></div>`;
       }).join('');
-      // Ẩn nút lọc không có mẫu nào
+      $('#gal').classList.add('gal-ig');
+      igDates();
+      // Ẩn nút lọc không có mẫu nào; không còn nhóm nào thì ẩn cả thanh lọc
       $$('#filters button').forEach(b => {
         if (b.dataset.f !== 'all') b.hidden = !$$('#gal .g').some(g => g.dataset.cat.split(' ').includes(b.dataset.f));
       });
+      $('#filters').hidden = $$('#filters button:not([data-f="all"])').every(b => b.hidden);
       markLikes();
     } catch (err) {
       console.warn('Instagram feed failed, keeping sample designs.', err);
     }
   }
   loadInstagram();
+
+  // Ngày đăng bài Instagram theo ngôn ngữ đang chọn, ví dụ "5 oct 2026"
+  function igDates() {
+    const f = new Intl.DateTimeFormat(lang, { day: 'numeric', month: 'short', year: 'numeric' });
+    $$('#gal b[data-date]').forEach(b => {
+      const d = new Date(b.dataset.date);
+      b.textContent = isNaN(d) ? 'Instagram' : f.format(d);
+    });
+  }
 
   /* ---------- Đánh giá khách hàng (dữ liệu trong js/reviews.js) ---------- */
   const isLocal = /^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname);

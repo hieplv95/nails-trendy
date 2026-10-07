@@ -347,3 +347,10 @@ footer small{color:var(--muted);font-size:.72rem;letter-spacing:.1em}
 .flag{width:24px;height:16px;object-fit:cover;border-radius:2px;box-shadow:0 0 0 1px rgba(28,26,23,.12);flex-shrink:0;display:block}
 .lang-btn{gap:8px;padding:6px 9px}
 .lang-list button[aria-current="true"]{background:var(--paper)}
+
+/* bộ sưu tập lấy từ Instagram */
+.filters[hidden]{display:none}
+.gal.gal-ig{grid-template-columns:repeat(3,1fr);max-width:960px;margin:0 auto}
+.g.ig figure a{position:absolute;inset:0}
+.g .play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:52px;height:52px;border-radius:50%;background:rgba(28,26,23,.55);color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.1rem;padding-left:4px;pointer-events:none}
+@media(max-width:900px){.gal.gal-ig{grid-template-columns:1fr 1fr}}

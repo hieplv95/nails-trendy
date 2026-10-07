@@ -30,10 +30,10 @@ window.SHOP = {
   twitter: "https://x.com/nailstrendyes",
   instagram: "https://www.instagram.com/nailtrendy.es/",
   tiktok: "https://www.tiktok.com/@nailstrendy.eu",
-  instagramFeed: "",              // link JSON feed từ behold.so — để trống thì hiện mẫu minh hoạ
-  instagramCount: 8,              // số bài Instagram hiện trong Bộ sưu tập
+  instagramFeed: "https://feeds.behold.so/sV29D2O7er76w71XQim5", // feed JSON từ behold.so — để trống thì hiện mẫu minh hoạ
+  instagramCount: 6,              // số bài Instagram hiện trong Bộ sưu tập (Behold miễn phí: tối đa 6)
   // Thông tin pháp lý (dùng trong các trang chính sách ở thư mục legal/)
   legalOwner: "Lee Le",           // CẦN XÁC NHẬN — chủ sở hữu / tên công ty (razón social)
-  nif: "B4118921",                // CẦN XÁC NHẬN — NIF/CIF (CIF chuẩn có 9 ký tự, số này mới có 8)
+  nif: "B44922128",               // NIF/CIF
   email: "manager@nailtrendy.com",
 };
