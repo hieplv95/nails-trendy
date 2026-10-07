@@ -1,6 +1,6 @@
 # Website Nails Trendy — Hướng dẫn sửa nội dung
 
-Giao diện hiện tại: **Paris Chic** (trắng ngà, đen, vàng champagne). Nội dung web viết bằng **tiếng Tây Ban Nha**, khách đặt lịch qua **WhatsApp**.
+Giao diện hiện tại: **Paris Chic** (trắng ngà, đen, vàng champagne). Nội dung web viết bằng **tiếng Việt**, riêng **bảng giá bằng tiếng Tây Ban Nha** (giống bảng giá treo ở tiệm). Khách đặt lịch qua **WhatsApp**.
 
 ## Cấu trúc
 ```
@@ -33,7 +33,7 @@ Bỏ ảnh vào `images/` (nên dùng ảnh dọc, tỉ lệ 3:4), rồi trong `
 
 Ảnh sẽ tự phủ kín khung. Có thể xoá các `<div class="nail">` (hình vẽ minh hoạ) khi đã có ảnh.
 
-`data-cat` của mỗi mẫu quyết định nút lọc: `french`, `nude`, `wine` (burdeos), `art` (nail art), `bride` (novias). Một mẫu có thể thuộc nhiều loại, cách nhau bằng dấu cách.
+`data-cat` của mỗi mẫu quyết định nút lọc: `french`, `nude`, `wine` (rượu vang), `art` (nghệ thuật), `bride` (cô dâu). Một mẫu có thể thuộc nhiều loại, cách nhau bằng dấu cách.
 
 ## Form đặt lịch
 Form kiểm tra thông tin, rồi mở WhatsApp với tin nhắn đặt lịch soạn sẵn gửi tới số của tiệm.

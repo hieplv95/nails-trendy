@@ -8,7 +8,7 @@
   $$('[data-shop]').forEach(el => { el.textContent = S[el.dataset.shop] || ''; });
   const links = {
     tel: 'tel:' + S.phoneRaw,
-    whatsapp: waUrl('Hola, me gustaría reservar una cita en Nails Trendy.'),
+    whatsapp: waUrl('Xin chào, mình muốn đặt lịch làm móng tại Nails Trendy.'),
     map: S.mapUrl,
     facebook: S.facebook,
     instagram: S.instagram,
@@ -89,7 +89,7 @@
     const [y, mo, d] = dateIn.value.split('-').map(Number);
     if (!y) return;
     if (closed.includes(new Date(y, mo - 1, d).getDay())) {
-      timeSel.add(new Option('Cerrado este día — elige otra fecha', ''));
+      timeSel.add(new Option('Tiệm nghỉ ngày này — vui lòng chọn ngày khác', ''));
       return;
     }
     const now = new Date();
@@ -100,7 +100,7 @@
       const t = `${pad(Math.floor(m / 60))}:${pad(m % 60)}`;
       timeSel.add(new Option(t, t));
     }
-    if (!timeSel.options.length) timeSel.add(new Option('Sin horas libres hoy — elige otra fecha', ''));
+    if (!timeSel.options.length) timeSel.add(new Option('Hôm nay đã hết giờ — vui lòng chọn ngày khác', ''));
   }
   dateIn.addEventListener('change', fillTimes);
   fillTimes();
@@ -123,7 +123,7 @@
     const [y, mo, d] = dateIn.value.split('-');
     const booking = {
       name, phone,
-      services: $$('input[name=svc]:checked', form).map(i => i.value).join(', ') || 'Por decidir',
+      services: $$('input[name=svc]:checked', form).map(i => i.value).join(', ') || 'Chưa chọn',
       date: `${d}/${mo}/${y}`, time: timeSel.value,
       note: form.elements.note.value.trim(),
       liked: likes.join(', ')
@@ -143,11 +143,11 @@
   const modal = $('#modal'), waBtn = $('#m-wa');
   function showSummary(b) {
     const text =
-      `Hola, quiero reservar una cita en ${S.name}:\n` +
-      `Nombre: ${b.name}\nTeléfono: ${b.phone}\nServicio: ${b.services}\n` +
-      `Fecha: ${b.date} a las ${b.time}` +
-      (b.liked ? `\nDiseños favoritos: ${b.liked}` : '') +
-      (b.note ? `\nNotas: ${b.note}` : '');
+      `Xin chào, mình muốn đặt lịch tại ${S.name}:\n` +
+      `Tên: ${b.name}\nSĐT: ${b.phone}\nDịch vụ: ${b.services}\n` +
+      `Thời gian: ${b.time} ngày ${b.date}` +
+      (b.liked ? `\nMẫu yêu thích: ${b.liked}` : '') +
+      (b.note ? `\nGhi chú: ${b.note}` : '');
     $('#m-sum').innerText = text;
     waBtn.href = waUrl(text);
     modal.classList.add('show');
